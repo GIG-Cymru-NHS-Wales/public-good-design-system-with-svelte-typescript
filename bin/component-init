@@ -1,0 +1,9 @@
+#!/bin/sh
+set -euf
+top=$(git rev-parse --show-toplevel)
+cat "$top/bin/component-init-list.txt" | 
+while read -r component_name; do
+    src="$top/bin/component-init-template.svelte"
+    dst="$top/src/lib/$component_name.svelte"
+    cp -n "$src" "$dst"
+done
