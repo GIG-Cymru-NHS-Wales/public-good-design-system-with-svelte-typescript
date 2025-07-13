@@ -3,7 +3,17 @@ set -euf
 top=$(git rev-parse --show-toplevel)
 cat "$top/bin/component-init-list.txt" | 
 while read -r component_name; do
+    # Copy a Svelte component template as needed.
     src="$top/bin/component-init-template.svelte"
     dst="$top/src/lib/$component_name.svelte"
     cp -n "$src" "$dst"
+    dir="$top/src/lib/$component_name"
+
+    # Create a component directory and placeholder files.
+    mkdir -p "$dir"
+    touch "$dir/+example.svelte"
+    touch "$dir/config.ts"
+    touch "$dir/types.ts"
+    touch "$dir/llms.txt"
+    touch "$dir/README.md"
 done
