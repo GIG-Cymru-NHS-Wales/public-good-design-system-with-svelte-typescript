@@ -10,6 +10,7 @@ Breadcrumb
 Button
 Calendar
 Card
+CardGroup
 CareCard
 Carousel
 Chart
