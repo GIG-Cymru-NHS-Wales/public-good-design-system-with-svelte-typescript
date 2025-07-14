@@ -11,9 +11,10 @@ while read -r component_name; do
 
     # Create a component directory and placeholder files.
     mkdir -p "$dir"
+    touch "$dir/README.md"
     touch "$dir/+example.svelte"
     touch "$dir/config.ts"
     touch "$dir/types.ts"
+    touch "$dir/utility.ts"
     touch "$dir/llms.txt"
-    touch "$dir/README.md"
 done
