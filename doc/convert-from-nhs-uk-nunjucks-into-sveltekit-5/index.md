@@ -1,14 +1,6 @@
 # Convert from NHS UK Design System Nunjucks to Public Good Design System using SvelteKit 5
 
-## Convert each component
-
-**Prompt**:
-
-- "Convert this code from Nunjucks to Svelte 5"
-
-- Then provide the component's code.
-
-## Key changes from Nunjucks to SvelteKit 5
+## Key Aspects
 
 **Key Features**:
 
@@ -21,6 +13,61 @@
 - **SvelteKit Integration**: Works seamlessly with SvelteKit navigation
 
 - **Accessibility**: Maintains all original ARIA attributes and semantic structure
+
+**Key Technical Benefits**:
+
+- **Better Developer Experience**: Provide IDE support, type checking, autocompletion, IntelliSense.
+
+- **Reactive Updates**: Automatically update when props change.
+
+- **Tree-shaking**: Better performance.
+
+- **Integration**: Use SvelteKit's routing and preloading.
+
+- **Event Integration**: Easy to handle custom navigation logic
+
+- **Performance**: Optimize rendering with Svelte's reactivity.
+
+- **Safety**: Provide type-safe props with TypeScript.
+
+- **Maintainability**: Use cleaner code structure and better separation of concerns.
+
+- **Progressive enhancement**: Works without JavaScript, enhanced with it
+
+- **Accessibility**: Built-in screen reader support with live regions
+
+- **Form integration**: Seamless integration with SvelteKit form validation
+
+## Setup
+
+Clone the NHS UK Design System repository:
+
+```sh
+git clone https://github.com/nhsuk/nhsuk-frontend.git
+```
+
+Change directory to the components:
+
+```sh
+cd packages/nhsuk-frontend/src/nhsuk/components 
+```
+
+Delete superfluous files that are all the same:
+
+```sh
+rm */README.md
+find . -depth 2 | grep "./\(.*\)/_\1.scss$" | xargs rm
+```
+
+## Convert each component
+
+**Prompt**:
+
+- "Convert this code from Nunjucks to Svelte 5"
+
+- Then provide the component's code.
+
+## Key changes from Nunjucks to SvelteKit 5
 
 - **Flexibility**: Supports both `<a>` and `<button>` elements
 
@@ -190,20 +237,34 @@
 
 - **Svelte**: Reactive derived values that automatically update based on props
 
-**Usage Benefits**:
+**Complex JavaScript Integration**:
 
-- **Better Developer Experience**: Provide IDE support, type checking, autocompletion, IntelliSense.
+- **Nunjucks**: Separate JavaScript class with complex DOM manipulation
 
-- **Reactive Updates**: Automatically update when props change.
+- **Svelte**: Built-in reactive state management with `$derived()` and `$bindable()`
 
-- **Tree-shaking**: Better performance.
+**State Management**:
 
-- **Integration**: Use SvelteKit's routing and preloading.
+- **Nunjucks**: Manual DOM updates and class toggling
 
-- **Event Integration**: Easy to handle custom navigation logic
+- **Svelte**: Reactive derived values that automatically update UI
 
-- **Performance**: Optimize rendering with Svelte's reactivity.
+**CharacterCount Logic**:
 
-- **Safety**: Provide type-safe props with TypeScript.
+- **Nunjucks**: Complex counting methods in JavaScript class
 
-- **Maintainability**: Use cleaner code structure and better separation of concerns.
+- **Svelte**: Clean reactive functions with proper word/character detection
+
+- **Performance**: Optimized with derived values to prevent unnecessary recalculations
+
+**Threshold Management**:
+
+- **Nunjucks**: Manual visibility toggling with classes
+
+- **Svelte**: Reactive visibility based on threshold percentage
+
+**Error State Handling**:
+
+- **Nunjucks**: Complex class manipulation for error states
+
+- **Svelte**: Reactive classes that automatically reflect error state
