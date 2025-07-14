@@ -109,6 +109,13 @@ find . -depth 2 | grep "./\(.*\)/_\1.scss$" | xargs rm
 
 - `{% endif %}` → removed (uses ternary operators)
 
+**If**:
+
+- **Nunjucks**: `{%- if x %}`
+
+- **Svelte**: `{#if x}`
+
+
 **Default Values**:
 
 - **Nunjucks**: Handled in template with complex ternary
@@ -290,12 +297,25 @@ find . -depth 2 | grep "./\(.*\)/_\1.scss$" | xargs rm
 **Form Integration**:
 
 - **Nunjucks**: Separate initialization and event handling
- 
+
 - **Svelte**: Built-in form integration with SvelteKit's enhance action
 
 **Accessibility Enhancement**:
 
-- **Original**: Manual ARIA attribute management
+- **Nunjucks**: Manual ARIA attribute management
 
-- **Svelte**: Automatic accessibility features with proper describedBy chains
+- **Svelte**: Automatic accessibility features with proper `describedBy` chains
 
+**ARIA Accessibility**:
+
+- **Nunjucks**: Basic `aria-current="page"` and `aria-label`
+
+- **Svelte**:  customizable ARIA labels
+
+**State Management**:
+
+- **Nunjucks**: Static current page detection
+ 
+- **Svelte**: Reactive current page detection with `$page` store integration
+
+- **Dynamic updates**: Automatic updates when route changes
