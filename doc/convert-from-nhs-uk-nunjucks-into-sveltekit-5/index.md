@@ -38,6 +38,16 @@
 
 - **Form integration**: Seamless integration with SvelteKit form validation
 
+- **State**: Reactive state management with `$state()` and `$derived()` for conditional visibility
+
+- **Two-way binding**: Uses `$bindable()` for seamless value synchronization
+
+- **Accessibility**: Proper `aria-expanded` and `aria-controls` management
+
+- **Validation**: Both client-side and server-side validation integration
+
+- **Screen reader support**: Comprehensive ARIA support with dynamic announcements
+
 ## Setup
 
 Clone the NHS UK Design System repository:
@@ -268,3 +278,24 @@ find . -depth 2 | grep "./\(.*\)/_\1.scss$" | xargs rm
 - **Nunjucks**: Complex class manipulation for error states
 
 - **Svelte**: Reactive classes that automatically reflect error state
+
+**Checkboxes Exclusive Logic**:
+
+- **Nunjucks**: Complex event handling for "none of the above" behavior
+
+- **Svelte**: Clean reactive logic that automatically manages exclusive groups
+
+- **State synchronization**: Automatic updates to conditional states when exclusives are toggled
+
+**Form Integration**:
+
+- **Nunjucks**: Separate initialization and event handling
+ 
+- **Svelte**: Built-in form integration with SvelteKit's enhance action
+
+**Accessibility Enhancement**:
+
+- **Original**: Manual ARIA attribute management
+
+- **Svelte**: Automatic accessibility features with proper describedBy chains
+

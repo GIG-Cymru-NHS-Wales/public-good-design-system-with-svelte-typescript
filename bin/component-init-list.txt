@@ -10,12 +10,14 @@ Breadcrumb
 Button
 Calendar
 Card
+CardCollection
 CardGroup
 CareCard
 Carousel
 Chart
 Character
 Checkbox
+Checkboxes
 Collapsible
 Combobox
 Command
