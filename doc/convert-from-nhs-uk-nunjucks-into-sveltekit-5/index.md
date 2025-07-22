@@ -71,11 +71,20 @@ find . -depth 2 | grep "./\(.*\)/_\1.scss$" | xargs rm
 
 ## Convert each component
 
-**Prompt**:
+Choose a stronger LLLM such as Claude Opus 4, instead of a weaker LLMS such as Claude Sonnet.
 
-- "Convert this code from Nunjucks to Svelte 5"
+Prompt:
 
-- Then provide the component's code.
+```txt
+Convert this code from Nunjucks to Svelte 5.
+- Create Svelte 5 component file.
+- Create file "+example.svelte" with examples.
+- Create file "types.ts" with TypeScript types.
+- Create file "config.ts" with component configuration.
+- Compile the the SCSS styles from the original file and convert them to vanilla CSS in the Svelte component.
+```
+
+Then provide the component's code.
 
 ## Key changes from Nunjucks to SvelteKit 5
 
