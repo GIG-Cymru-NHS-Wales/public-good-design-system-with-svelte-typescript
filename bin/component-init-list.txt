@@ -32,6 +32,7 @@ Details
 Dialog
 DoList
 DoNotList
+DoAndDontList
 Drawer
 DropdownMenu
 ErrorMessage
