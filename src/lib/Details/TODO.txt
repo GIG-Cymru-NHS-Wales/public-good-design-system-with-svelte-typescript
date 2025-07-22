@@ -1,1 +1,0 @@
-TODO: revisit this component because it didn't work cleanly.
