@@ -71,7 +71,7 @@ find . -depth 2 | grep "./\(.*\)/_\1.scss$" | xargs rm
 
 ## Convert each component
 
-Choose a stronger LLLM such as Claude Opus 4, instead of a weaker LLMS such as Claude Sonnet.
+Use a stronger LLLM such as Claude Opus 4, instead of a weaker LLMS such as Claude Sonnet.
 
 Prompt:
 
@@ -81,14 +81,21 @@ Convert this code from Nunjucks to Svelte 5.
 - Create file "+example.svelte" with examples.
 - Create file "types.ts" with TypeScript types.
 - Create file "config.ts" with component configuration.
-- Compile the the SCSS styles from the original file and convert them to vanilla CSS in the Svelte component.
+- Compile the SCSS styles from the original file and convert them to vanilla CSS in the Svelte component.
 ```
 
-Then provide the component's code.
+Then provide the component's code, such as via copy/paste:
+
+```sh
+cd nhsuk-frontend/packages/nhsuk-frontend/src/nhsuk/components/button
+cat * | pbcopy
+```
 
 ## Key changes from Nunjucks to SvelteKit 5
 
-- **Flexibility**: Supports both `<a>` and `<button>` elements
+**Flexibility**:
+
+- Supports both `<a>` and `<button>` elements
 
 **Component Structure**:
 
