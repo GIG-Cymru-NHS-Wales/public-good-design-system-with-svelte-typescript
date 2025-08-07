@@ -15,33 +15,33 @@
 <BackLink text="Go back to services" />
 
 <!-- Custom href -->
-<BackLink 
-  text="Back to homepage" 
-  href="/" 
+<BackLink
+  text="Back to homepage"
+  href="/"
 />
 
 <!-- As button with click handler -->
-<BackLink 
-  element="button" 
+<BackLink
+  element="button"
   text="Back"
   on:click={handleBackClick}
 />
 
 <!-- With HTML content -->
-<BackLink 
+<BackLink
   html="<strong>Back</strong> to results"
   href="/results"
 />
 
 <!-- Reverse style (for dark backgrounds) -->
-<BackLink 
+<BackLink
   classes="nhsuk-back-link--reverse"
   text="Back"
   href="/previous"
 />
 
 <!-- With custom attributes -->
-<BackLink 
+<BackLink
   text="Back to form"
   href="/form"
   attributes={{
@@ -51,7 +51,7 @@
 />
 
 <!-- Using with SvelteKit navigation -->
-<BackLink 
+<BackLink
   text="Back to services"
   href="/services"
   attributes={{
@@ -76,7 +76,7 @@
   }
 </script>
 
-<BackLink 
+<BackLink
   element="button"
   text="Back"
   on:click={handleHistoryBack}

@@ -22,18 +22,18 @@
 
   // Generate ID prefix
   const prefix = idPrefix || name;
-  
+
   // Track conditional reveals
   let conditionalStates = $state<Record<string, boolean>>({});
-  
+
   // Check if any items have conditional content
   const hasConditionals = items.some(item => item.conditional?.html);
-  
+
   // Build aria-describedby
   let describedBy = fieldset?.describedBy || '';
   const hintId = hint && prefix ? `${prefix}-hint` : undefined;
   const errorId = errorMessage && prefix ? `${prefix}-error` : undefined;
-  
+
   if (hintId) {
     describedBy = describedBy ? `${describedBy} ${hintId}` : hintId;
   }
@@ -65,11 +65,11 @@
       if (!item.divider) {
         const itemId = item.id || `${prefix}${index > 0 ? `-${index + 1}` : ''}`;
         const isChecked = item.checked || (selectedValue === item.value && item.checked !== false);
-        
+
         if (isChecked && selectedValue !== item.value) {
           selectedValue = item.value;
         }
-        
+
         if (item.conditional?.html) {
           conditionalStates[itemId] = isChecked;
         }
@@ -80,7 +80,7 @@
   // Handle radio change
   function handleChange(item: RadioItem, itemId: string) {
     selectedValue = item.value;
-    
+
     // Update all conditional states
     items.forEach((radioItem, index) => {
       if (!radioItem.divider && radioItem.conditional?.html) {
@@ -129,7 +129,7 @@
           text={hint.text}
         />
       {/if}
-      
+
       {#if errorMessage}
         <ErrorMessage
           id={errorId}
@@ -138,8 +138,8 @@
           text={errorMessage.text}
         />
       {/if}
-      
-      <div 
+
+      <div
         class={radiosClasses}
         {...parseAttributes(attributes)}
       >
@@ -149,7 +149,7 @@
           {@const hasHint = !!(item.hint?.text || item.hint?.html)}
           {@const itemHintId = `${itemId}-item-hint`}
           {@const isChecked = selectedValue === item.value}
-          
+
           {#if item.divider}
             <div class="nhsuk-radios__divider">{item.divider}</div>
           {:else}
@@ -168,7 +168,7 @@
                 onchange={() => handleChange(item, itemId)}
                 {...parseAttributes(item.attributes || {})}
               >
-              
+
               <Label
                 html={item.html}
                 text={item.text}
@@ -176,7 +176,7 @@
                 attributes={item.label?.attributes}
                 for={itemId}
               />
-              
+
               {#if hasHint}
                 <Hint
                   id={itemHintId}
@@ -187,9 +187,9 @@
                 />
               {/if}
             </div>
-            
+
             {#if item.conditional?.html}
-              <div 
+              <div
                 class="nhsuk-radios__conditional{!conditionalStates[itemId] ? ' nhsuk-radios__conditional--hidden' : ''}"
                 id={conditionalId}
               >
@@ -210,7 +210,7 @@
         text={hint.text}
       />
     {/if}
-    
+
     {#if errorMessage}
       <ErrorMessage
         id={errorId}
@@ -219,8 +219,8 @@
         text={errorMessage.text}
       />
     {/if}
-    
-    <div 
+
+    <div
       class={radiosClasses}
       {...parseAttributes(attributes)}
     >
@@ -230,7 +230,7 @@
         {@const hasHint = !!(item.hint?.text || item.hint?.html)}
         {@const itemHintId = `${itemId}-item-hint`}
         {@const isChecked = selectedValue === item.value}
-        
+
         {#if item.divider}
           <div class="nhsuk-radios__divider">{item.divider}</div>
         {:else}
@@ -249,7 +249,7 @@
               onchange={() => handleChange(item, itemId)}
               {...parseAttributes(item.attributes || {})}
             >
-            
+
             <Label
               html={item.html}
               text={item.text}
@@ -257,7 +257,7 @@
               attributes={item.label?.attributes}
               for={itemId}
             />
-            
+
             {#if hasHint}
               <Hint
                 id={itemHintId}
@@ -268,9 +268,9 @@
               />
             {/if}
           </div>
-          
+
           {#if item.conditional?.html}
-            <div 
+            <div
               class="nhsuk-radios__conditional{!conditionalStates[itemId] ? ' nhsuk-radios__conditional--hidden' : ''}"
               id={conditionalId}
             >

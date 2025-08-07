@@ -58,7 +58,7 @@ export const taskStatusConfigs: Record<TaskStatusType, TaskStatusConfig> = {
  */
 export function createTaskStatus(type: TaskStatusType): import('./types').TaskStatus {
   const config = taskStatusConfigs[type];
-  
+
   if (config.tagClass) {
     return {
       tag: {
@@ -67,7 +67,7 @@ export function createTaskStatus(type: TaskStatusType): import('./types').TaskSt
       }
     };
   }
-  
+
   return {
     text: config.text,
     classes: config.statusClass
@@ -86,7 +86,7 @@ export const taskListPatterns = {
     { title: 'Allergies', status: 'incomplete' },
     { title: 'Review and submit', status: 'cannot-start' }
   ],
-  
+
   /** Pattern for an application process */
   application: [
     { title: 'Eligibility check', status: 'completed' },
@@ -95,7 +95,7 @@ export const taskListPatterns = {
     { title: 'Declaration', status: 'not-started' },
     { title: 'Payment', status: 'cannot-start' }
   ],
-  
+
   /** Pattern for a registration process */
   registration: [
     { title: 'Create account', status: 'completed' },

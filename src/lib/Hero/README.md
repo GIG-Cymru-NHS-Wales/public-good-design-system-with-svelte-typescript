@@ -62,7 +62,7 @@
 
 2. Content Overlay: When both image and heading are present, the content appears in a blue box with an arrow pointer
 
-3. Responsive Behavior: 
+3. Responsive Behavior:
    - Mobile: Content stacks vertically
    - Desktop: Content overlays the image with absolute positioning
    - Print: Appropriate styles for printed output
@@ -71,7 +71,7 @@
 
 5. Grid System: Uses the NHS UK grid system with proper responsive columns
 
-6. Accessibility: 
+6. Accessibility:
    - Proper heading hierarchy
    - Hidden decorative elements with `aria-hidden`
    - High contrast mode support

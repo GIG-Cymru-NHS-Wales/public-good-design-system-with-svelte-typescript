@@ -42,7 +42,7 @@
     <h2>Custom Usage</h2>
     <p>Example with custom classes and attributes</p>
     <div class="example-content">
-      <SummaryList 
+      <SummaryList
         rows={[
           {
             key: { text: 'Patient ID' },
@@ -50,8 +50,8 @@
           },
           {
             key: { text: 'Appointment' },
-            value: { 
-              html: '<strong>Tomorrow 2:30 PM</strong><br>Dr. Smith, Cardiology' 
+            value: {
+              html: '<strong>Tomorrow 2:30 PM</strong><br>Dr. Smith, Cardiology'
             },
             actions: {
               items: [

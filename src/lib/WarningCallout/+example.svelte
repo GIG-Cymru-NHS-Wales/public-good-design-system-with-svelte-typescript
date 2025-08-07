@@ -2,7 +2,7 @@
   import WarningCallout from './WarningCallout.svelte';
   import { warningConfigs, commonWarnings, createWarningConfig } from './config';
   import type { WarningType } from './types';
-  
+
   // Interactive example state
   let selectedType = $state<WarningType>('important');
   let customHeading = $state('Custom Warning');
@@ -14,7 +14,7 @@
   <section>
     <h2>Default Example</h2>
     <p>Standard warning callout with "Important" heading.</p>
-    <WarningCallout 
+    <WarningCallout
       heading="Important"
       text="For safety, tell your doctor or pharmacist if you're taking any other medicines, including herbal medicines, vitamins or supplements."
     />
@@ -23,7 +23,7 @@
   <section>
     <h2>With Custom Heading</h2>
     <p>Warning callout with a custom heading that gets "Important:" prefix for screen readers.</p>
-    <WarningCallout 
+    <WarningCallout
       heading="School, nursery or work"
       text="Stay away from school, nursery or work until all the spots have crusted over. This is usually 5 days after the spots first appeared."
     />
@@ -32,7 +32,7 @@
   <section>
     <h2>With HTML Content</h2>
     <p>Warning callout with rich HTML content.</p>
-    <WarningCallout 
+    <WarningCallout
       heading="Important safety information"
       html={`
         <p>You should seek immediate medical attention if you experience:</p>
@@ -66,30 +66,30 @@
   <section>
     <h2>Common Warning Types</h2>
     <p>Pre-configured warning types for medical contexts.</p>
-    
+
     <h3>Medicine Warnings</h3>
-    <WarningCallout 
+    <WarningCallout
       heading={warningConfigs.interaction.heading}
       text={commonWarnings.medicines.interactions}
     />
-    
-    <WarningCallout 
+
+    <WarningCallout
       heading={warningConfigs.pregnancy.heading}
       text={commonWarnings.medicines.pregnancy}
     />
-    
-    <WarningCallout 
+
+    <WarningCallout
       heading={warningConfigs.driving.heading}
       text={commonWarnings.medicines.driving}
     />
-    
+
     <h3>Health Warnings</h3>
-    <WarningCallout 
+    <WarningCallout
       heading={warningConfigs.emergency.heading}
       text={commonWarnings.health.emergency}
     />
-    
-    <WarningCallout 
+
+    <WarningCallout
       heading="Infection control"
       text={commonWarnings.health.infection}
     />
@@ -98,21 +98,21 @@
   <section>
     <h2>Different Heading Levels</h2>
     <p>Examples with different heading levels for proper document structure.</p>
-    
+
     <div class="heading-examples">
-      <WarningCallout 
+      <WarningCallout
         heading="Heading Level 2"
         headingLevel={2}
         text="This warning uses an H2 element for the heading."
       />
-      
-      <WarningCallout 
+
+      <WarningCallout
         heading="Heading Level 3 (Default)"
         headingLevel={3}
         text="This warning uses an H3 element for the heading (default)."
       />
-      
-      <WarningCallout 
+
+      <WarningCallout
         heading="Heading Level 4"
         headingLevel={4}
         text="This warning uses an H4 element for the heading."
@@ -123,7 +123,7 @@
   <section>
     <h2>Interactive Example</h2>
     <p>Customize the warning callout properties.</p>
-    
+
     <div class="controls">
       <div class="control-group">
         <label for="warning-type">Warning Type:</label>
@@ -133,25 +133,25 @@
           {/each}
         </select>
       </div>
-      
+
       <div class="control-group">
         <label for="custom-heading">Custom Heading:</label>
-        <input 
+        <input
           id="custom-heading"
-          type="text" 
+          type="text"
           bind:value={customHeading}
         />
       </div>
-      
+
       <div class="control-group">
         <label for="custom-text">Custom Text:</label>
-        <textarea 
+        <textarea
           id="custom-text"
           bind:value={customText}
           rows="3"
         />
       </div>
-      
+
       <div class="control-group">
         <label for="heading-level">Heading Level:</label>
         <select id="heading-level" bind:value={selectedHeadingLevel}>
@@ -161,19 +161,19 @@
         </select>
       </div>
     </div>
-    
+
     <div class="preview">
       <h3>Preview:</h3>
-      <WarningCallout 
+      <WarningCallout
         heading={customHeading}
         headingLevel={selectedHeadingLevel}
         text={customText}
       />
     </div>
-    
+
     <div class="preview">
       <h3>Using Selected Type:</h3>
-      <WarningCallout 
+      <WarningCallout
         {...createWarningConfig(selectedType, customText)}
       />
     </div>
@@ -182,7 +182,7 @@
   <section>
     <h2>Custom Attributes and Classes</h2>
     <p>Adding custom classes and data attributes.</p>
-    <WarningCallout 
+    <WarningCallout
       heading="Custom styled warning"
       text="This warning has custom classes and attributes applied."
       classes="custom-warning-class"
@@ -205,7 +205,7 @@
           <li>Tell us if you develop any illness or infection</li>
           <li>Arrange for someone to drive you home after the procedure</li>
         </ul>
-        
+
         <p><strong>On the day of your procedure:</strong></p>
         <ul>
           <li>Do not eat anything for 6 hours before</li>
@@ -213,7 +213,7 @@
           <li>Take your regular medicines with a small sip of water</li>
           <li>Bring a list of all your current medicines</li>
         </ul>
-        
+
         <p>If you have any questions, call <strong>0300 311 22 33</strong> (Monday to Friday, 9am to 5pm).</p>
       {/snippet}
     </WarningCallout>

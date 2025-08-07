@@ -4,7 +4,7 @@
 
 <div class="example-container">
   <h2>Inset Text Examples</h2>
-  
+
   <section class="example">
     <h3>Default (Using Snippet)</h3>
     <InsetText>
@@ -67,7 +67,7 @@
 
   <section class="example">
     <h3>With Custom Attributes</h3>
-    <InsetText 
+    <InsetText
       attributes={{
         'data-test': 'inset-text-component',
         'data-module': 'govuk-inset-text',

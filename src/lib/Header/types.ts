@@ -24,16 +24,16 @@ I'll help you convert this Nunjucks component to Svelte 5. Let me create the nec
 
 
 Fieldset.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the Nunjucks fieldset component to Svelte 5. Here's what I've created:
 
 1. Fieldset.svelte - Main Component
@@ -97,16 +97,16 @@ I'll help you convert this Nunjucks footer component to Svelte 5. Let me create 
 
 
 Footer.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the Nunjucks footer component to Svelte 5. Here's what I've created:
 
 1. Footer.svelte - Main Component
@@ -141,7 +141,7 @@ CSS: Converted SCSS to vanilla CSS with:
 Calculated rem values (base 16px)
 Expanded media queries (desktop: 61.875em, tablet: 40.0625em)
 NHS UK color values (
-#f0f4f5 for grey-4, 
+#f0f4f5 for grey-4,
 #005eb8 for blue, etc.)
 Clearfix implementation
 Print media query for hiding footer
@@ -177,7 +177,7 @@ I'll help you convert this NHS UK header component from Nunjucks to Svelte 5. Th
 
 
 Header.svelte - Main Component
-Code 
+Code
 
 
 
@@ -185,16 +185,16 @@ Continue
 
 
 Header.svelte - Main Component
-Code ∙ Version 2 
+Code ∙ Version 2
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 
 
 
@@ -202,10 +202,10 @@ Continue
 
 
 +example.svelte - Examples
-Code 
+Code
 
 Making edits...
-Code 
+Code
 
 Continue
 
@@ -215,32 +215,32 @@ export interface NavigationItem {
    * The href of a navigation item in the header
    */
   href: string;
-  
+
   /**
    * Text for the navigation item. If `html` is provided, the `text` argument will be ignored
    */
   text?: string;
-  
+
   /**
    * HTML for the navigation item. If `html` is provided, the `text` argument will be ignored
    */
   html?: string;
-  
+
   /**
    * Set to true if this links to the current page being shown
    */
   current?: boolean;
-  
+
   /**
    * Set to true if the current page is within this section, but the link doesn't necessarily link to the current page
    */
   active?: boolean;
-  
+
   /**
    * Classes to add to the list item containing the link
    */
   classes?: string;
-  
+
   /**
    * HTML attributes (for example data attributes) to add to the list item containing the link
    */
@@ -252,34 +252,34 @@ export interface AccountItem {
    * The href of an account item in the header
    */
   href?: string;
-  
+
   /**
    * Text for the account item. If `html` is provided, the `text` argument will be ignored
    */
   text?: string;
-  
+
   /**
    * HTML for the account item. If `html` is provided, the `text` argument will be ignored
    */
   html?: string;
-  
+
   /**
    * Whether to include the account icon for the account item
    * @default false
    */
   icon?: boolean;
-  
+
   /**
    * If set, the item will become a button wrapped in a form with the action given. Useful for log out buttons
    */
   action?: string;
-  
+
   /**
    * The value to use for the `method` of the form if `action` is set
    * @default 'post'
    */
   method?: string;
-  
+
   /**
    * Classes to add to the account item
    */
@@ -288,16 +288,16 @@ export interface AccountItem {
 
 export interface LogoOptions {
   /**
-   * The `href` of the link for the logo. If not set, and a `service.href` is set, 
+   * The `href` of the link for the logo. If not set, and a `service.href` is set,
    * or both are set to same value, then the logo and service name will be combined into a single link
    */
   href?: string;
-  
+
   /**
    * The path of the logo image, if you are not using the default NHS logo
    */
   src?: string;
-  
+
   /**
    * The `aria-label` for the logo
    * @default 'NHS homepage'
@@ -310,7 +310,7 @@ export interface ServiceOptions {
    * The text to use for the service name
    */
   text?: string;
-  
+
   /**
    * The `href` of the link for the service name
    */
@@ -322,12 +322,12 @@ export interface OrganisationOptions {
    * Organisation name
    */
   name: string;
-  
+
   /**
    * Longer organisation names can be split onto multiple lines
    */
   split?: string;
-  
+
   /**
    * Organisation descriptor
    */
@@ -339,18 +339,18 @@ export interface NavigationOptions {
    * Array of navigation links for use in the header
    */
   items?: NavigationItem[];
-  
+
   /**
    * The `aria-label` for the primary navigation
    * @default 'Menu'
    */
   ariaLabel?: string;
-  
+
   /**
    * Classes to add to the primary navigation
    */
   classes?: string;
-  
+
   /**
    * HTML attributes (for example data attributes) to add to the primary navigation
    */
@@ -363,25 +363,25 @@ export interface SearchOptions {
    * @default 'https://www.nhs.uk/search'
    */
   action?: string;
-  
+
   /**
    * The name for the search field
    * @default 'q'
    */
   name?: string;
-  
+
   /**
    * The placeholder text for the search field
    * @default 'Search'
    */
   placeholder?: string;
-  
+
   /**
    * The label for the search field
    * @default 'Search the NHS website'
    */
   visuallyHiddenLabel?: string;
-  
+
   /**
    * The label for the visually hidden button
    * @default 'Search'
@@ -394,18 +394,18 @@ export interface AccountOptions {
    * Array of account items for use in the header
    */
   items?: AccountItem[];
-  
+
   /**
    * The `aria-label` for the account navigation
    * @default 'Account'
    */
   ariaLabel?: string;
-  
+
   /**
    * Classes to add to the account navigation
    */
   classes?: string;
-  
+
   /**
    * HTML attributes (for example data attributes) to add to the account navigation
    */
@@ -417,47 +417,47 @@ export interface HeaderProps {
    * Object containing options for the logo
    */
   logo?: LogoOptions;
-  
+
   /**
    * Object containing options for the service name
    */
   service?: ServiceOptions;
-  
+
   /**
    * Settings for header with organisational logo
    */
   organisation?: OrganisationOptions;
-  
+
   /**
    * Object containing settings for the primary navigation
    */
   navigation?: NavigationOptions;
-  
+
   /**
    * Object containing settings for a search box
    */
   search?: SearchOptions | boolean;
-  
+
   /**
    * Object containing settings for the account section of the header
    */
   account?: AccountOptions;
-  
+
   /**
    * Base URL to prepend to the `logo.src` path
    */
   baseUrl?: string;
-  
+
   /**
    * Classes to add to the header container, useful if you want to make the header fixed width
    */
   containerClasses?: string;
-  
+
   /**
    * Classes to add to the header container
    */
   classes?: string;
-  
+
   /**
    * HTML attributes (for example data attributes) to add to the header container
    */

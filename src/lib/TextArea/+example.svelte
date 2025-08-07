@@ -1,29 +1,29 @@
 <script lang="ts">
   import Textarea from './Textarea.svelte';
-  import { 
-    commonConfigs, 
-    createTextareaConfig, 
+  import {
+    commonConfigs,
+    createTextareaConfig,
     autocompleteOptions,
     validationPatterns,
-    defaultCharacterCountMessages 
+    defaultCharacterCountMessages
   } from './config';
   import type { TextareaProps } from './types';
-  
+
   // Interactive examples state
   let defaultValue = $state('');
   let errorValue = $state('');
   let characterCountValue = $state('');
   let validationValue = $state('');
   let customValue = $state('');
-  
+
   // Character count
   const maxLength = 200;
   $: charactersRemaining = maxLength - characterCountValue.length;
   $: isOverLimit = charactersRemaining < 0;
-  
+
   // Validation example
   let validationError = $state<string | null>(null);
-  
+
   function validateNoHtml(value: string) {
     if (value && !validationPatterns.noHtml.test(value)) {
       validationError = 'HTML tags are not allowed';
@@ -31,9 +31,9 @@
       validationError = null;
     }
   }
-  
+
   $: validateNoHtml(validationValue);
-  
+
   // Default example
   const defaultExample: TextareaProps = {
     name: 'more-detail',
@@ -45,7 +45,7 @@
       text: 'Do not include personal information, like your name, date of birth or NHS number'
     }
   };
-  
+
   // Error example
   const errorExample: TextareaProps = {
     name: 'no-ni-reason',
@@ -57,7 +57,7 @@
       text: 'You must provide an explanation'
     }
   };
-  
+
   // Autocomplete example
   const autocompleteExample: TextareaProps = {
     name: 'address',
@@ -73,7 +73,7 @@
   <section>
     <h2>Default Example</h2>
     <p>A standard textarea with label and hint text.</p>
-    <Textarea 
+    <Textarea
       {...defaultExample}
       bind:value={defaultValue}
     />
@@ -87,7 +87,7 @@
   <section>
     <h2>With Error Message</h2>
     <p>Shows validation error styling and messaging.</p>
-    <Textarea 
+    <Textarea
       {...errorExample}
       bind:value={errorValue}
     />
@@ -96,7 +96,7 @@
   <section>
     <h2>With Autocomplete</h2>
     <p>Helps users by enabling browser autocomplete for addresses.</p>
-    <Textarea 
+    <Textarea
       {...autocompleteExample}
     />
   </section>
@@ -104,14 +104,14 @@
   <section>
     <h2>Character Count</h2>
     <p>Shows remaining characters to help users stay within limits.</p>
-    <Textarea 
+    <Textarea
       name="character-count"
       label={{ text: 'Describe your symptoms' }}
       hint={{ text: `Maximum ${maxLength} characters` }}
       maxlength={maxLength}
       bind:value={characterCountValue}
-      errorMessage={isOverLimit ? { 
-        text: defaultCharacterCountMessages.over(Math.abs(charactersRemaining)) 
+      errorMessage={isOverLimit ? {
+        text: defaultCharacterCountMessages.over(Math.abs(charactersRemaining))
       } : null}
     />
     <div class="character-count" class:warning={charactersRemaining < 50} class:error={isOverLimit}>
@@ -126,7 +126,7 @@
   <section>
     <h2>With Validation</h2>
     <p>Real-time validation to prevent HTML tags.</p>
-    <Textarea 
+    <Textarea
       name="validation-example"
       label={{ text: 'Additional comments' }}
       hint={{ text: 'Plain text only - no HTML allowed' }}
@@ -138,21 +138,21 @@
   <section>
     <h2>Different Sizes</h2>
     <p>Textareas with different row counts.</p>
-    
+
     <div class="grid">
-      <Textarea 
+      <Textarea
         name="small"
         label={{ text: 'Small (3 rows)' }}
         rows={3}
       />
-      
-      <Textarea 
+
+      <Textarea
         name="medium"
         label={{ text: 'Medium (5 rows - default)' }}
         rows={5}
       />
-      
-      <Textarea 
+
+      <Textarea
         name="large"
         label={{ text: 'Large (10 rows)' }}
         rows={10}
@@ -163,13 +163,13 @@
   <section>
     <h2>Common Configurations</h2>
     <p>Pre-configured textareas for common use cases.</p>
-    
+
     <h3>Address</h3>
     <Textarea {...commonConfigs.address} />
-    
+
     <h3>Feedback</h3>
     <Textarea {...commonConfigs.feedback} />
-    
+
     <h3>Medical History</h3>
     <Textarea {...commonConfigs.medicalHistory} />
   </section>
@@ -177,23 +177,23 @@
   <section>
     <h2>States</h2>
     <p>Different states of the textarea component.</p>
-    
+
     <div class="grid">
-      <Textarea 
+      <Textarea
         name="disabled"
         label={{ text: 'Disabled' }}
         disabled
         value="This textarea is disabled"
       />
-      
-      <Textarea 
+
+      <Textarea
         name="readonly"
         label={{ text: 'Read-only' }}
         readonly
         value="This textarea is read-only"
       />
-      
-      <Textarea 
+
+      <Textarea
         name="required"
         label={{ text: 'Required field' }}
         required
@@ -205,7 +205,7 @@
   <section>
     <h2>With Placeholder</h2>
     <p>Placeholder text provides an example of expected input.</p>
-    <Textarea 
+    <Textarea
       name="placeholder"
       label={{ text: 'Tell us about your experience' }}
       placeholder="For example: The appointment was..."
@@ -215,9 +215,9 @@
   <section>
     <h2>Page Heading Label</h2>
     <p>When the label should also be the page heading.</p>
-    <Textarea 
+    <Textarea
       name="page-heading"
-      label={{ 
+      label={{
         text: 'What is your feedback about our service?',
         isPageHeading: true
       }}
@@ -228,13 +228,13 @@
   <section>
     <h2>Custom Attributes</h2>
     <p>Additional HTML attributes and custom styling.</p>
-    <Textarea 
+    <Textarea
       name="custom"
-      label={{ 
+      label={{
         text: 'Custom textarea',
         classes: 'custom-label-class'
       }}
-      hint={{ 
+      hint={{
         text: 'This textarea has custom attributes',
         classes: 'custom-hint-class'
       }}
@@ -250,7 +250,7 @@
   <section>
     <h2>Helper Function Example</h2>
     <p>Using the <code>createTextareaConfig</code> helper function.</p>
-    <Textarea 
+    <Textarea
       {...createTextareaConfig(
         'helper-example',
         'Quick feedback',
@@ -383,4 +383,3 @@
   :global(.custom-textarea-class:focus) {
     border-color: #330072;
   }
-  

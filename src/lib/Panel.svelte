@@ -16,7 +16,7 @@
   const hasContent = !!(children || html || text);
 </script>
 
-<div 
+<div
   class="nhsuk-panel{classes ? ` ${classes}` : ''}"
   {...parseAttributes(attributes)}
 >
@@ -69,7 +69,7 @@
       {/if}
     </h6>
   {/if}
-  
+
   {#if hasContent}
     <div class="nhsuk-panel__body">
       {#if children}

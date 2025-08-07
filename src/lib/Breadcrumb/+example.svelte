@@ -34,7 +34,7 @@
       href: '/departments/cardiology',
       text: 'Cardiology',
       classes: 'custom-breadcrumb-item',
-      attributes: { 
+      attributes: {
         lang: 'en',
         'data-department-id': 'card-001'
       }
@@ -43,7 +43,7 @@
 </script>
 
 <!-- Basic usage -->
-<Breadcrumb 
+<Breadcrumb
   items={breadcrumbItems}
   text="Current Page"
   href="/services/health/current"
@@ -53,7 +53,7 @@
 <Breadcrumb items={breadcrumbItems} />
 
 <!-- Reverse style (for dark backgrounds) -->
-<Breadcrumb 
+<Breadcrumb
   items={breadcrumbItems}
   text="Current Page"
   href="/current"
@@ -61,7 +61,7 @@
 />
 
 <!-- With custom accessibility label -->
-<Breadcrumb 
+<Breadcrumb
   items={breadcrumbItems}
   text="Patient Information"
   href="/patients/info"
@@ -69,7 +69,7 @@
 />
 
 <!-- With custom attributes -->
-<Breadcrumb 
+<Breadcrumb
   items={advancedItems}
   text="Patient Details"
   href="/patients/12345"

@@ -95,7 +95,7 @@ export interface TextareaProps {
 /**
  * Common autocomplete values for textareas
  */
-export type AutocompleteValue = 
+export type AutocompleteValue =
   | 'on'
   | 'off'
   | 'street-address'
@@ -127,4 +127,3 @@ export type AutocompleteValue =
   | 'bday-day'
   | 'bday-month'
   | 'bday-year';
-  

@@ -24,8 +24,8 @@
 <Button text="Continue" classes="nhsuk-button--login" />
 
 <!-- Button with double-click prevention -->
-<Button 
-  text="Save and continue" 
+<Button
+  text="Save and continue"
   preventDoubleClick={true}
   on:click={handleButtonClick}
 />
@@ -46,24 +46,24 @@
 <Button html="<strong>Save</strong> and continue" />
 
 <!-- Custom button element -->
-<Button 
-  element="button" 
-  text="Custom button" 
+<Button
+  element="button"
+  text="Custom button"
   type="button"
   name="custom"
   value="custom-value"
 />
 
 <!-- Input button -->
-<Button 
-  element="input" 
-  text="Submit form" 
+<Button
+  element="input"
+  text="Submit form"
   type="submit"
   name="submit-btn"
 />
 
 <!-- Button with custom attributes -->
-<Button 
+<Button
   text="Track me"
   attributes={{
     'data-testid': 'track-button',
@@ -98,17 +98,17 @@
 <form method="POST" use:enhance={handleSubmit}>
   <input bind:value={formData.name} name="name" placeholder="Name" />
   <input bind:value={formData.email} name="email" placeholder="Email" />
-  
+
   <!-- Primary submit button with double-click prevention -->
-  <Button 
+  <Button
     text="Submit"
     type="submit"
     preventDoubleClick={true}
     disabled={isSubmitting}
   />
-  
+
   <!-- Secondary cancel button -->
-  <Button 
+  <Button
     text="Cancel"
     type="button"
     classes="nhsuk-button--secondary"

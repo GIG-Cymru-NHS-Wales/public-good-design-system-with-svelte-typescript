@@ -83,7 +83,7 @@ export const commonWarnings = {
     storage: "Store this medicine in a cool, dry place away from direct sunlight and out of reach of children.",
     allergies: "Do not take this medicine if you are allergic to any of its ingredients. Check the patient information leaflet for a full list."
   },
-  
+
   health: {
     emergency: "Call 999 or go to A&E immediately if you experience severe symptoms.",
     infection: "Stay away from school, nursery or work until you're no longer infectious.",
@@ -91,7 +91,7 @@ export const commonWarnings = {
     symptoms: "See a GP urgently if your symptoms get worse or don't improve after a few days.",
     vaccination: "Make sure your vaccinations are up to date to prevent this condition."
   },
-  
+
   procedures: {
     beforeSurgery: "Tell your surgeon about all medicines you're taking, including supplements and herbal remedies.",
     aftercare: "Follow all aftercare instructions carefully to avoid complications.",
@@ -99,7 +99,7 @@ export const commonWarnings = {
     wounds: "Keep the wound clean and dry. Contact your GP if you notice signs of infection.",
     appointments: "Do not miss your follow-up appointments as they are important for your recovery."
   },
-  
+
   lifestyle: {
     diet: "Some foods may interact with this treatment. Ask your doctor about dietary restrictions.",
     exercise: "Avoid strenuous exercise until your doctor says it's safe to resume normal activities.",

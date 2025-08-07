@@ -45,7 +45,7 @@
   }
 </script>
 
-<nav 
+<nav
   class="nhsuk-contents-list{classes ? ` ${classes}` : ''}"
   role="navigation"
   aria-label={ariaLabel}
@@ -54,15 +54,15 @@
   <h2 class="nhsuk-u-visually-hidden">Contents</h2>
   <ol class="nhsuk-contents-list__list">
     {#each items as item}
-      <li 
+      <li
         class="nhsuk-contents-list__item"
         aria-current={item.current ? 'page' : undefined}
       >
         {#if item.current}
           <span class="nhsuk-contents-list__current">{item.text}</span>
         {:else}
-          <a 
-            class="nhsuk-contents-list__link" 
+          <a
+            class="nhsuk-contents-list__link"
             href={item.href}
             on:click={(e) => handleClick(e, item)}
           >
@@ -99,7 +99,7 @@
       left nhsuk-px-to-rem(12px) no-repeat;
     padding: 0 0 0 nhsuk-spacing(5);
     position: relative;
-    
+
     @include nhsuk-media-query($from: tablet) {
       background: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__emdash' xmlns='http://www.w3.org/2000/svg' fill='%23aeb7bd' width='16' height='1' aria-hidden='true'%3E%3Cpath d='M0 0h19v1H0z'%3E%3C/path%3E%3C/svg%3E")
         left nhsuk-px-to-rem(14px) no-repeat;

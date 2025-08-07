@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { TagProps } from './types';
   import { classNames, getColorClass } from './config';
-  
+
   let {
     text = '',
     html = '',
@@ -11,7 +11,7 @@
     attributes = {},
     ...rest
   }: TagProps = $props();
-  
+
   // Build the complete class string
   $: tagClasses = [
     classNames.root,
@@ -21,7 +21,7 @@
   ].filter(Boolean).join(' ');
 </script>
 
-<strong 
+<strong
   class={tagClasses}
   {...attributes}
   {...rest}
@@ -48,7 +48,7 @@
     --color-nhsuk-red: #d5281b;
     --color-nhsuk-warm-yellow: #ffb81c;
     --color-nhsuk-yellow: #fae100;
-    
+
     /* Spacing */
     --nhsuk-spacing-1: 4px;
     --nhsuk-spacing-2: 8px;
@@ -75,7 +75,7 @@
   }
 
   /* Color variants */
-  
+
   /* White variant */
   .nhsuk-tag--white {
     background-color: var(--color-nhsuk-white);

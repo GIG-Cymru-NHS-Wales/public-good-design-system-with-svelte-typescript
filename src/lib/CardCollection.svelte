@@ -25,7 +25,7 @@
 
 <div class="card-collection card-collection--{variant}{classes ? ` ${classes}` : ''}">
   {#each cards as card, index}
-    <Card 
+    <Card
       {...card}
       on:click={handleCardClick(card, index)}
     >

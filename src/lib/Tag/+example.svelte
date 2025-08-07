@@ -80,18 +80,18 @@
     <h2>Custom Attributes</h2>
     <p>Additional HTML attributes can be added to tags.</p>
     <div class="tag-row">
-      <Tag 
-        text="With ID" 
+      <Tag
+        text="With ID"
         color="blue"
         attributes={{ id: 'status-tag', 'data-status': 'active' }}
       />
-      <Tag 
-        text="With Classes" 
+      <Tag
+        text="With Classes"
         color="green"
         classes="custom-class another-class"
       />
-      <Tag 
-        text="With Title" 
+      <Tag
+        text="With Title"
         color="purple"
         attributes={{ title: 'This is a tooltip' }}
       />
@@ -101,17 +101,17 @@
   <section>
     <h2>Interactive Example</h2>
     <p>Customize the tag properties to see how it changes.</p>
-    
+
     <div class="controls">
       <div class="control-group">
         <label for="custom-text">Text:</label>
-        <input 
+        <input
           id="custom-text"
-          type="text" 
+          type="text"
           bind:value={customText}
         />
       </div>
-      
+
       <div class="control-group">
         <label for="custom-color">Color:</label>
         <select id="custom-color" bind:value={customColor}>
@@ -122,22 +122,22 @@
           {/each}
         </select>
       </div>
-      
+
       <div class="control-group">
         <label>
-          <input 
-            type="checkbox" 
+          <input
+            type="checkbox"
             bind:checked={noBorder}
           />
           Remove border
         </label>
       </div>
     </div>
-    
+
     <div class="preview">
-      <Tag 
-        text={customText} 
-        color={customColor} 
+      <Tag
+        text={customText}
+        color={customColor}
         noBorder={noBorder}
       />
     </div>
@@ -146,7 +146,7 @@
   <section>
     <h2>Use Cases</h2>
     <p>Common scenarios where tags are useful.</p>
-    
+
     <div class="use-case">
       <h3>Task Status</h3>
       <div class="tag-row">
@@ -156,7 +156,7 @@
         <Tag text="Complete" color="green" />
       </div>
     </div>
-    
+
     <div class="use-case">
       <h3>Priority Levels</h3>
       <div class="tag-row">
@@ -166,7 +166,7 @@
         <Tag text="Critical" color="red" />
       </div>
     </div>
-    
+
     <div class="use-case">
       <h3>Content Types</h3>
       <div class="tag-row">

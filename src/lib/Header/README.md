@@ -20,7 +20,7 @@
 
   - `NavigationItem` - Navigation menu items
 
-  - `AccountItem` - Account section items  
+  - `AccountItem` - Account section items
 
   - `LogoOptions` - Logo configuration
 
@@ -80,14 +80,14 @@
 
 4. Account Features: Supports both links and form buttons for account items, with optional user icons
 
-5. CSS Architecture: 
+5. CSS Architecture:
    - Converted all SCSS to vanilla CSS
    - Maintained all responsive breakpoints
    - Preserved all hover, focus, and active states
    - Included print styles
    - Supports all color variants
 
-6. Accessibility: 
+6. Accessibility:
    - Proper ARIA labels and roles
    - Keyboard navigation support
    - Screen reader friendly markup

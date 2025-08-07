@@ -56,12 +56,12 @@
 
 ## Key Implementation Details:
 
-1. Responsive Width: 
+1. Responsive Width:
    - Full width on mobile
    - 66.67% width on desktop (two-thirds)
    - 50% width for print media
 
-2. Spacing: 
+2. Spacing:
    - Responsive margins (32px mobile, 48px desktop)
    - Consecutive images have their top margin removed
 
@@ -69,11 +69,11 @@
    - White background with grey bottom border
    - Caption has padding and smaller font size
 
-4. Accessibility: 
+4. Accessibility:
    - Uses semantic HTML (`<figure>` and `<figcaption>`)
    - Requires `alt` text for all images
 
-5. Responsive Images: 
+5. Responsive Images:
    - Full support for `srcset` and `sizes` attributes
    - Images are block-level and scale to container width
 

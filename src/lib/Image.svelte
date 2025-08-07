@@ -13,13 +13,13 @@
   }: ImageProps = $props();
 </script>
 
-<figure 
+<figure
   class="nhsuk-image{classes ? ` ${classes}` : ''}"
   {...parseAttributes(attributes)}
 >
-  <img 
-    class="nhsuk-image__img" 
-    {src} 
+  <img
+    class="nhsuk-image__img"
+    {src}
     {alt}
     {sizes}
     {srcset}

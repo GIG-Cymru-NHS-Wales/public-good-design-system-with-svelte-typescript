@@ -59,7 +59,7 @@ git clone https://github.com/nhsuk/nhsuk-frontend.git
 Change directory to the components:
 
 ```sh
-cd packages/nhsuk-frontend/src/nhsuk/components 
+cd packages/nhsuk-frontend/src/nhsuk/components
 ```
 
 Delete superfluous files that are all the same:
@@ -71,7 +71,7 @@ find . -depth 2 | grep "./\(.*\)/_\1.scss$" | xargs rm
 
 ## Convert each component
 
-Use a stronger LLLM such as Claude Opus 4, instead of a weaker LLMS such as Claude Sonnet.
+Use a stronger LLM such as Claude Opus 4, instead of a weaker LLM such as Claude Sonnet.
 
 Prompt:
 
@@ -190,7 +190,7 @@ cat * | pbcopy
 
 - **Svelte**: Dynamic element creation uses `svelte:element` for dynamic heading levels.
 
-**Array Processing:** 
+**Array Processing:**
 
 - **Nunjucks**: `{% for item in params.items %}` with complex loop logic
 
@@ -331,7 +331,7 @@ cat * | pbcopy
 **State Management**:
 
 - **Nunjucks**: Static current page detection
- 
+
 - **Svelte**: Reactive current page detection with `$page` store integration
 
 - **Dynamic updates**: Automatic updates when route changes

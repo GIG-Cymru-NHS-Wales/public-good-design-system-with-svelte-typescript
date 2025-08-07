@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { ErrorMessageProps } from './types';
-  
+
   let {
     text,
     html,
@@ -9,12 +9,12 @@
     visuallyHiddenText = 'Error',
     ...attributes
   }: ErrorMessageProps = $props();
-  
+
   // Determine what content to show
   const content = $derived(html || text || '');
 </script>
 
-<span 
+<span
   class="nhsuk-error-message {className}"
   {id}
   {...attributes}

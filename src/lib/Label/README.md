@@ -94,16 +94,16 @@
 <Label text="NHS number" for="nhs-number" />
 
 <!-- Large label as page heading -->
-<Label 
-  text="What is your NHS number?" 
-  classes="nhsuk-label--xl" 
+<Label
+  text="What is your NHS number?"
+  classes="nhsuk-label--xl"
   isPageHeading={true}
   for="nhs-number"
 />
 
 <!-- Label with HTML content -->
-<Label 
-  html="Email <span class='nhsuk-u-visually-hidden'>(required)</span>" 
+<Label
+  html="Email <span class='nhsuk-u-visually-hidden'>(required)</span>"
   for="email"
 />
 ```

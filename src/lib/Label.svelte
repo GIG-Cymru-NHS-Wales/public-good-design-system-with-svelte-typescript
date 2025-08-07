@@ -18,7 +18,7 @@
 {#if hasContent}
   {#if isPageHeading}
     <h1 class="nhsuk-label-wrapper">
-      <label 
+      <label
         class="nhsuk-label{classes ? ` ${classes}` : ''}"
         for={htmlFor}
         {...parseAttributes(attributes)}
@@ -31,7 +31,7 @@
       </label>
     </h1>
   {:else}
-    <label 
+    <label
       class="nhsuk-label{classes ? ` ${classes}` : ''}"
       for={htmlFor}
       {...parseAttributes(attributes)}

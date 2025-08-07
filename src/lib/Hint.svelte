@@ -11,7 +11,7 @@
   }: HintProps = $props();
 </script>
 
-<div 
+<div
   class="nhsuk-hint{classes ? ` ${classes}` : ''}"
   {id}
   {...parseAttributes(attributes)}

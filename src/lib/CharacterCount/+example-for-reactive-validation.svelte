@@ -16,7 +16,7 @@
   $: {
     const charCount = content.length;
     const wordCount = content.trim().split(/\s+/).filter(word => word.length > 0).length;
-    
+
     formStore.update(state => ({
       ...state,
       content,
@@ -68,13 +68,13 @@
     <dl>
       <dt>Characters:</dt>
       <dd>{contentAnalysis.characters}</dd>
-      
+
       <dt>Words:</dt>
       <dd>{contentAnalysis.words}</dd>
-      
+
       <dt>Sentences:</dt>
       <dd>{contentAnalysis.sentences}</dd>
-      
+
       <dt>Readability Score:</dt>
       <dd>{contentAnalysis.readabilityScore.toFixed(1)}/100</dd>
     </dl>

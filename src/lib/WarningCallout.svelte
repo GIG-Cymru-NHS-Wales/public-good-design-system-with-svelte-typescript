@@ -2,7 +2,7 @@
   import type { WarningCalloutProps } from './types';
   import type { Snippet } from 'svelte';
   import { classNames, defaultConfig, isImportantHeading } from './config';
-  
+
   let {
     heading,
     headingLevel = defaultConfig.headingLevel,
@@ -13,15 +13,15 @@
     children,
     ...rest
   }: WarningCalloutProps = $props();
-  
+
   // Determine if we should add the visually hidden "Important:" prefix
   const needsImportantPrefix = !isImportantHeading(heading);
-  
+
   // Build the complete class string
   const rootClasses = [classNames.root, classes].filter(Boolean).join(' ');
 </script>
 
-<div 
+<div
   class={rootClasses}
   {...attributes}
   {...rest}
@@ -93,7 +93,7 @@
       {/if}
     </h6>
   {/if}
-  
+
   {#if children}
     {@render children()}
   {:else if html}

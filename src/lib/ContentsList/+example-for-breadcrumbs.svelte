@@ -39,7 +39,7 @@
 
   function handleSectionNavigation(event: CustomEvent) {
     const { href, text } = event.detail;
-    
+
     // Update navigation store
     navigationStore.update(state => ({
       ...state,
@@ -60,7 +60,7 @@
 </script>
 
 {#if contentsWithCurrent.length > 0}
-  <ContentsList 
+  <ContentsList
     items={contentsWithCurrent}
     ariaLabel="{currentSection} guide navigation"
     classes="health-guide-contents"

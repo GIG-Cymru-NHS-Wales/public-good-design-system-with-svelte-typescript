@@ -51,11 +51,11 @@
   function handleToggle(event: Event) {
     const target = event.target as HTMLDetailsElement;
     const isOpen = target.open;
-    
+
     open = isOpen;
-    
+
     dispatch('toggle', { open: isOpen });
-    
+
     if (isOpen) {
       dispatch('open');
     } else {
@@ -103,7 +103,7 @@
       {/if}
     </span>
   </summary>
-  
+
   <div class="nhsuk-details__text">
     {#if children}
       {@render children()}
@@ -163,12 +163,12 @@
     }
   }
 
-  /* 
+  /*
    * We wrap styles for newer browsers in a feature query, which is ignored by
    * older browsers, which always expand the details element.
-   * 
+   *
    * Additionally, -ms-ime-align is only supported by Edge 12 - 18
-   * 
+   *
    * This ensures we don't use these styles in browsers which:
    *   - support ES6 modules but not the <details> element (Edge 16 - 18)
    *   - do not support ES6 modules or the <details> element (eg, IE8+)

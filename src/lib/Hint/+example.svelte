@@ -4,7 +4,7 @@
 
 <div class="example-container">
   <h2>Hint Text Examples</h2>
-  
+
   <section class="example">
     <h3>Default Hint</h3>
     <Hint text="Do not include personal information, like your name, date of birth or NHS number" />
@@ -17,7 +17,7 @@
 
   <section class="example">
     <h3>Hint with Custom ID</h3>
-    <Hint 
+    <Hint
       text="Enter your full name as it appears on official documents"
       id="name-hint"
     />
@@ -25,7 +25,7 @@
 
   <section class="example">
     <h3>Hint with Custom Classes</h3>
-    <Hint 
+    <Hint
       text="This hint has custom styling applied"
       classes="custom-hint-class"
     />
@@ -33,7 +33,7 @@
 
   <section class="example">
     <h3>Hint with Custom Attributes</h3>
-    <Hint 
+    <Hint
       text="This hint has data attributes for testing"
       attributes={{
         'data-test': 'hint-component',

@@ -21,7 +21,7 @@ export interface WarningCalloutProps {
 /**
  * Common warning types with predefined headings
  */
-export type WarningType = 
+export type WarningType =
   | 'important'
   | 'safety'
   | 'medical'

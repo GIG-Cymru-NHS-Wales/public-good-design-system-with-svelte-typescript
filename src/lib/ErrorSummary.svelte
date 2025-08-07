@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import type { ErrorSummaryProps } from './types';
   import { getFragmentFromUrl } from './utils';
-  
+
   let {
     titleText,
     titleHtml,
@@ -14,81 +14,81 @@
     focusOnPageLoad = true,
     ...attributes
   }: ErrorSummaryProps = $props();
-  
+
   let errorSummaryElement: HTMLDivElement;
-  
+
   // Determine title and description content
   const titleContent = $derived(titleHtml || titleText || '');
   const descriptionContent = $derived(descriptionHtml || descriptionText || '');
-  
+
   onMount(() => {
     if (focusOnPageLoad && errorSummaryElement) {
       errorSummaryElement.focus();
     }
   });
-  
+
   function getAssociatedLegendOrLabel(input: HTMLInputElement): HTMLElement | null {
     const fieldset = input.closest('fieldset');
-    
+
     if (fieldset) {
       const legends = fieldset.getElementsByTagName('legend');
-      
+
       if (legends.length) {
         const candidateLegend = legends[0];
-        
+
         // For radio or checkbox, always use the legend if there is one
         if (input.type === 'checkbox' || input.type === 'radio') {
           return candidateLegend;
         }
-        
+
         // For other input types, only use legend if input would be in top half of screen
         const legendTop = candidateLegend.getBoundingClientRect().top;
         const inputRect = input.getBoundingClientRect();
-        
+
         if (inputRect.height && window.innerHeight) {
           const inputBottom = inputRect.top + inputRect.height;
-          
+
           if (inputBottom - legendTop < window.innerHeight / 2) {
             return candidateLegend;
           }
         }
       }
     }
-    
+
     // Fall back to label
     return (
       document.querySelector(`label[for='${input.getAttribute('id')}']`) ||
       input.closest('label')
     );
   }
-  
+
   function focusTarget(target: EventTarget | null): boolean {
     if (!target || !(target instanceof HTMLAnchorElement) || !target.href) {
       return false;
     }
-    
+
     const inputId = getFragmentFromUrl(target.href);
     if (!inputId) {
       return false;
     }
-    
+
     const input = document.getElementById(inputId);
     if (!input || !(input instanceof HTMLInputElement)) {
       return false;
     }
-    
+
     const legendOrLabel = getAssociatedLegendOrLabel(input);
     if (!legendOrLabel) {
       return false;
     }
-    
+
     // Scroll the legend or label into view before focusing the input
     legendOrLabel.scrollIntoView();
     input.focus({ preventScroll: true });
-    
+
     return true;
   }
-  
+
   function handleClick(event: MouseEvent) {
     if (focusTarget(event.target)) {
       event.preventDefault();

@@ -22,12 +22,12 @@
 
   // Generate ID if not provided
   const selectId = id || name;
-  
+
   // Build aria-describedby
   let ariaDescribedBy = describedBy || '';
   const hintId = hint && selectId ? `${selectId}-hint` : undefined;
   const errorId = errorMessage && selectId ? `${selectId}-error` : undefined;
-  
+
   if (hintId) {
     ariaDescribedBy = ariaDescribedBy ? `${ariaDescribedBy} ${hintId}` : hintId;
   }
@@ -54,7 +54,7 @@
   }
 </script>
 
-<div 
+<div
   class={formGroupClasses}
   {...parseAttributes(formGroup.attributes || {})}
 >
@@ -68,7 +68,7 @@
       for={selectId}
     />
   {/if}
-  
+
   {#if hint}
     <Hint
       id={hintId}
@@ -78,7 +78,7 @@
       text={hint.text}
     />
   {/if}
-  
+
   {#if errorMessage}
     <ErrorMessage
       id={errorId}
@@ -87,7 +87,7 @@
       text={errorMessage.text}
     />
   {/if}
-  
+
   <select
     class={selectClasses}
     id={selectId}

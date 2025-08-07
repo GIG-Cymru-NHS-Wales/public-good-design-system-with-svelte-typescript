@@ -34,7 +34,7 @@ export function announceDetailsToggle(summaryText: string, isOpen: boolean): voi
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'nhsuk-u-visually-hidden';
   announcement.textContent = message;
-  
+
   document.body.appendChild(announcement);
   setTimeout(() => {
     document.body.removeChild(announcement);
@@ -210,12 +210,12 @@ export class DetailsManager {
     const currentState = this.details.get(id) || false;
     const newState = !currentState;
     this.details.set(id, newState);
-    
+
     const callback = this.callbacks.get(id);
     if (callback) {
       callback(newState);
     }
-    
+
     return newState;
   }
 
@@ -288,7 +288,7 @@ export function debounceDetailsToggle(
   delay = 300
 ) {
   let timeoutId: ReturnType<typeof setTimeout>;
-  
+
   return (isOpen: boolean) => {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
@@ -317,10 +317,10 @@ export function auditDetailsAccessibility(element: HTMLDetailsElement): string[]
   const headings = content?.querySelectorAll('h1, h2, h3, h4, h5, h6');
   if (headings && headings.length > 0) {
     // Verify heading hierarchy
-    const headingLevels = Array.from(headings).map(h => 
+    const headingLevels = Array.from(headings).map(h =>
       parseInt(h.tagName.charAt(1), 10)
     );
-    
+
     for (let i = 1; i < headingLevels.length; i++) {
       if (headingLevels[i] > headingLevels[i-1] + 1) {
         issues.push('Heading hierarchy skips levels');
@@ -379,7 +379,7 @@ export function simulateDetailsToggle(
   shouldOpen: boolean
 ) {
   element.open = shouldOpen;
-  
+
   // Dispatch toggle event
   const event = new Event('toggle', { bubbles: true });
   element.dispatchEvent(event);
@@ -409,7 +409,7 @@ export function createResponsiveDetails(
   content: string
 ): DetailsProps {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  
+
   return {
     summaryText: isMobile ? mobileTitle : desktopTitle,
     text: content,
@@ -442,13 +442,13 @@ export function measureDetailsPerformance(
 ) {
   if (typeof performance !== 'undefined') {
     const startTime = performance.now();
-    
+
     return () => {
       const endTime = performance.now();
       const duration = endTime - startTime;
-      
+
       console.log(`Details ${operation} operation for ${detailsId} took ${duration}ms`);
-      
+
       // Send to analytics if available
       if (typeof gtag !== 'undefined') {
         gtag('event', 'timing_complete', {
@@ -459,6 +459,6 @@ export function measureDetailsPerformance(
       }
     };
   }
-  
+
   return () => {}; // No-op if performance API not available
 }

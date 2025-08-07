@@ -4,11 +4,11 @@
 
 <div class="example-container">
   <h2>Footer Examples</h2>
-  
+
   <section class="example">
     <h3>Default Footer</h3>
     <div class="example-wrapper">
-      <Footer 
+      <Footer
         links={[
           {
             url: '#',
@@ -38,7 +38,7 @@
   <section class="example">
     <h3>Multi-Column Footer</h3>
     <div class="example-wrapper">
-      <Footer 
+      <Footer
         copyright="© Crown copyright"
         links={[
           {
@@ -139,7 +139,7 @@
   <section class="example">
     <h3>Footer with Custom Copyright</h3>
     <div class="example-wrapper">
-      <Footer 
+      <Footer
         copyright="© East London NHS Foundation Trust"
         links={[
           {
@@ -170,7 +170,7 @@
   <section class="example">
     <h3>Footer with Custom Classes and Attributes</h3>
     <div class="example-wrapper">
-      <Footer 
+      <Footer
         classes="custom-footer-class"
         containerClasses="custom-container-class"
         attributes={{
@@ -198,7 +198,7 @@
   <section class="example">
     <h3>Minimal Footer</h3>
     <div class="example-wrapper">
-      <Footer 
+      <Footer
         links={[
           {
             url: '#',

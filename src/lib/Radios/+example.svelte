@@ -1,6 +1,6 @@
 <script lang="ts">
   import Radios from './Radios.svelte';
-  
+
   let example1Value = $state('no');
   let example2Value = $state('');
   let example3Value = $state('');
@@ -14,7 +14,7 @@
 
 <div class="example-container">
   <h2>Radios Examples</h2>
-  
+
   <section class="example">
     <h3>Default Radios</h3>
     <Radios
@@ -283,7 +283,7 @@
           }
         ]}
       />
-      
+
       <button class="nhsuk-button" type="submit">Continue</button>
     </form>
   </section>

@@ -24,16 +24,16 @@ I'll help you convert this Nunjucks component to Svelte 5. Let me create the nec
 
 
 Fieldset.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the Nunjucks fieldset component to Svelte 5. Here's what I've created:
 
 1. Fieldset.svelte - Main Component
@@ -97,16 +97,16 @@ I'll help you convert this Nunjucks footer component to Svelte 5. Let me create 
 
 
 Footer.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the Nunjucks footer component to Svelte 5. Here's what I've created:
 
 1. Footer.svelte - Main Component
@@ -141,7 +141,7 @@ CSS: Converted SCSS to vanilla CSS with:
 Calculated rem values (base 16px)
 Expanded media queries (desktop: 61.875em, tablet: 40.0625em)
 NHS UK color values (
-#f0f4f5 for grey-4, 
+#f0f4f5 for grey-4,
 #005eb8 for blue, etc.)
 Clearfix implementation
 Print media query for hiding footer
@@ -177,7 +177,7 @@ I'll help you convert this NHS UK header component from Nunjucks to Svelte 5. Th
 
 
 Header.svelte - Main Component
-Code 
+Code
 
 
 
@@ -185,16 +185,16 @@ Continue
 
 
 Header.svelte - Main Component
-Code ∙ Version 2 
+Code ∙ Version 2
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 
 
 
@@ -202,10 +202,10 @@ Continue
 
 
 +example.svelte - Examples
-Code ∙ Version 2 
+Code ∙ Version 2
 
 +example.svelte - Examples
-Code ∙ Version 3 
+Code ∙ Version 3
 I've successfully converted the NHS UK Header component from Nunjucks to Svelte 5. Here's what I've created:
 
 1. Header.svelte - Main Component
@@ -285,16 +285,16 @@ I'll help you convert this NHS UK Hero component from Nunjucks to Svelte 5. Let 
 
 
 Hero.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the NHS UK Hero component from Nunjucks to Svelte 5. Here's what I've created:
 
 1. Hero.svelte - Main Component
@@ -455,16 +455,16 @@ I'll help you convert this NHS UK Hint component from Nunjucks to Svelte 5. Let 
 
 
 Hint.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the NHS UK Hint component from Nunjucks to Svelte 5. Here's what I've created:
 
 1. Hint.svelte - Main Component
@@ -637,7 +637,7 @@ export const options = components.getMacroOptions(params)
 <figure class="nhsuk-image
 {%- if params.classes %} {{ params.classes }}{% endif %}"
 {{- nhsukAttributes(params.attributes) }}>
-  <img class="nhsuk-imageimg" src="{{ params.src }}" alt="{{ params.alt }}" 
+  <img class="nhsuk-imageimg" src="{{ params.src }}" alt="{{ params.alt }}"
   {%- if params.sizes and params.srcset %}
     sizes="{{ params.sizes }}" srcset="{{ params.srcset }}"
   {%- endif -%}
@@ -653,16 +653,16 @@ I'll help you convert this NHS UK Image component from Nunjucks to Svelte 5. Let
 
 
 Image.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the NHS UK Image component from Nunjucks to Svelte 5. Here's what I've created:
 
 1. Image.svelte - Main Component
@@ -734,16 +734,16 @@ I'll help you convert this NHS UK Input component from Nunjucks to Svelte 5. Let
 
 
 Input.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the NHS UK Input component from Nunjucks to Svelte 5. Here's what I've created:
 
 1. Input.svelte - Main Component
@@ -946,7 +946,7 @@ pub struct ElementDefinition {
     pub constraint: Option<Vec<Constraint>>,
     pub binding: Option<Binding>,
     pub extension: Option<Vec<Extension>>,
-    
+
     // Common properties
     pub short: Option<String>,
     pub definition: Option<String>,
@@ -956,7 +956,7 @@ pub struct ElementDefinition {
     pub fixed_value: Option<serde_json::Value>,
     pub pattern_value: Option<serde_json::Value>,
     pub example: Option<Vec<Example>>,
-    
+
     // Additional properties
     #[serde(flatten)]
     pub additional: HashMap<String, serde_json::Value>,
@@ -972,7 +972,7 @@ pub struct Extension {
     pub value_code: Option<String>,
     pub value_uri: Option<String>,
     pub value_canonical: Option<String>,
-    
+
     // Handle other value[x] types
     #[serde(flatten)]
     pub value: HashMap<String, serde_json::Value>,
@@ -1082,7 +1082,7 @@ impl FhirProfileParser {
     /// Parse extensions from an element
     pub fn parse_element_extensions(&self, element: &ElementDefinition) -> HashMap<String, ExtensionValue> {
         let mut extension_map = HashMap::new();
-        
+
         if let Some(extensions) = &element.extension {
             for ext in extensions {
                 let key = ext.url.clone();
@@ -1090,7 +1090,7 @@ impl FhirProfileParser {
                 extension_map.insert(key, value);
             }
         }
-        
+
         extension_map
     }
 
@@ -1111,14 +1111,14 @@ impl FhirProfileParser {
         if let Some(val) = &extension.value_uri {
             return ExtensionValue::Uri(val.clone());
         }
-        
+
         // Check for other value types in the HashMap
         for (key, value) in &extension.value {
             if key.starts_with("value") {
                 return ExtensionValue::Json(value.clone());
             }
         }
-        
+
         ExtensionValue::None
     }
 
@@ -1156,25 +1156,25 @@ rust
 fn main() -> Result<(), Box<dyn Error>> {
     // Parse FHIR profile bundle
     let parser = FhirProfileParser::from_file("profile-bundle.json")?;
-    
+
     // Get all structure definitions
     let structure_defs = parser.get_structure_definitions();
     println!("Found {} structure definitions", structure_defs.len());
-    
+
     // Process each structure definition
     for structure_def in structure_defs {
         println!("\nProfile: {}", structure_def.name);
         println!("URL: {}", structure_def.url);
         println!("Type: {}", structure_def.r#type);
-        
+
         // Get snapshot elements
         let snapshot_elements = parser.get_snapshot_elements(structure_def);
         println!("Snapshot elements: {}", snapshot_elements.len());
-        
+
         // Process each element
         for element in snapshot_elements {
             println!("\n  Element: {}", element.path);
-            
+
             // Parse extensions
             let extensions = parser.parse_element_extensions(element);
             if !extensions.is_empty() {
@@ -1183,7 +1183,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                     println!("    {}: {:?}", url, value);
                 }
             }
-            
+
             // Show constraints
             let constraints = parser.get_element_constraints(element);
             if !constraints.is_empty() {
@@ -1192,7 +1192,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                     println!("    {}: {}", constraint.key, constraint.human);
                 }
             }
-            
+
             // Show type information
             if let Some(types) = &element.r#type {
                 println!("  Types:");
@@ -1202,7 +1202,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         }
     }
-    
+
     Ok(())
 }
 Advanced Features
@@ -1217,7 +1217,7 @@ impl ExtensionHandler {
             url: extension.url.clone(),
             values: HashMap::new(),
         };
-        
+
         // Handle nested extensions
         if let Some(nested) = extension.value.get("extension") {
             if let Ok(nested_extensions) = serde_json::from_value::<Vec<Extension>>(nested.clone()) {
@@ -1228,10 +1228,10 @@ impl ExtensionHandler {
                 }
             }
         }
-        
+
         Ok(complex_ext)
     }
-    
+
     fn extract_value(extension: &Extension) -> serde_json::Value {
         // Extract the first value[x] field found
         for (key, value) in &extension.value {
@@ -1256,7 +1256,7 @@ impl ProfileValidator {
     /// Validate element against profile constraints
     pub fn validate_element(element: &ElementDefinition) -> Vec<ValidationError> {
         let mut errors = vec![];
-        
+
         // Check cardinality
         if let (Some(min), Some(max)) = (element.min, &element.max) {
             if max != "*" {
@@ -1270,7 +1270,7 @@ impl ProfileValidator {
                 }
             }
         }
-        
+
         // Validate extensions
         if let Some(extensions) = &element.extension {
             for ext in extensions {
@@ -1282,7 +1282,7 @@ impl ProfileValidator {
                 }
             }
         }
-        
+
         errors
     }
 }
@@ -1391,7 +1391,7 @@ export const examples = {
   default: {
     callBlock: outdent
       <p>You can report any suspected side effects to the <a href="https://yellowcard.mhra.gov.uk/" title="External website">UK safety scheme</a>.</p>
-    
+
   }
 }
 export const options = components.getMacroOptions(params)
@@ -1417,16 +1417,16 @@ I'll help you convert this NHS UK Inset Text component from Nunjucks to Svelte 5
 
 
 InsetText.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the NHS UK Inset Text component from Nunjucks to Svelte 5. Here's what I've created:
 
 1. InsetText.svelte - Main Component
@@ -1650,16 +1650,16 @@ I'll help you convert this NHS UK Label component from Nunjucks to Svelte 5. Let
 
 
 Label.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the NHS UK Label component from Nunjucks to Svelte 5. Here's what I've created:
 
 1. Label.svelte - Main Component
@@ -1720,16 +1720,16 @@ svelte
 <Label text="NHS number" for="nhs-number" />
 
 <!-- Large label as page heading -->
-<Label 
-  text="What is your NHS number?" 
-  classes="nhsuk-label--xl" 
+<Label
+  text="What is your NHS number?"
+  classes="nhsuk-label--xl"
   isPageHeading={true}
   for="nhs-number"
 />
 
 <!-- Label with HTML content -->
-<Label 
-  html="Email <span class='nhsuk-u-visually-hidden'>(required)</span>" 
+<Label
+  html="Email <span class='nhsuk-u-visually-hidden'>(required)</span>"
   for="email"
 />
 The component assumes you have:
@@ -1866,7 +1866,7 @@ These metrics help teams make data-driven decisions about test automation invest
 
 
 
-generate a javascript code example of how to do 
+generate a javascript code example of how to do
 
 ROI of Test Automation
 
@@ -1906,12 +1906,12 @@ class TestAutomationROI {
 
     // Calculate costs
     const manualCost = this.calculateManualCost(
-      manualExecutionTime, 
-      expectedRuns, 
-      costPerHour, 
+      manualExecutionTime,
+      expectedRuns,
+      costPerHour,
       timeframe
     );
-    
+
     const automationCost = this.calculateAutomationCost(
       initialAutomationTime,
       automationMaintenanceTime,
@@ -1925,7 +1925,7 @@ class TestAutomationROI {
     const savings = manualCost - automationCost.recurring;
     const investment = automationCost.initial;
     const roi = ((savings - investment) / investment) * 100;
-    
+
     // Calculate breakeven point
     const breakevenMonths = this.calculateBreakeven(
       manualCost / (timeframe * 12),
@@ -1957,7 +1957,7 @@ class TestAutomationROI {
   calculateAutomationCost(initialTime, maintenanceTime, executionTime, runs, costPerHour, timeframe) {
     const initial = initialTime * costPerHour;
     const recurring = (maintenanceTime + (executionTime * runs)) * costPerHour * timeframe;
-    
+
     return {
       initial,
       recurring,
@@ -2001,10 +2001,10 @@ class TestAutomationROI {
     return {
       status,
       recommendation,
-      breakevenAnalysis: breakevenMonths < 12 ? 
-        'Quick payback period' : 
-        breakevenMonths < 24 ? 
-        'Reasonable payback period' : 
+      breakevenAnalysis: breakevenMonths < 12 ?
+        'Quick payback period' :
+        breakevenMonths < 24 ?
+        'Reasonable payback period' :
         'Long payback period'
     };
   }
@@ -2024,7 +2024,7 @@ class AdvancedTestAutomationROI extends TestAutomationROI {
     }));
 
     const totals = this.calculateTotals(results);
-    
+
     return {
       suites: results,
       portfolio: totals,
@@ -2131,7 +2131,7 @@ function generateROIReport(roiData) {
     },
     recommendation: roiData.analysis.recommendation
   };
-  
+
   return report;
 }
 
@@ -2155,13 +2155,13 @@ const ROICalculatorComponent = {
       results: null
     };
   },
-  
+
   methods: {
     calculateROI() {
       const calculator = new TestAutomationROI();
       this.results = calculator.calculateROI(this.inputs);
     },
-    
+
     formatCurrency(value) {
       return new Intl.NumberFormat('en-US', {
         style: 'currency',
@@ -2169,7 +2169,7 @@ const ROICalculatorComponent = {
       }).format(value);
     }
   },
-  
+
   computed: {
     roiClass() {
       if (!this.results) return '';
@@ -2235,16 +2235,16 @@ I'll help you convert this NHS UK Pagination component from Nunjucks to Svelte 5
 
 
 Pagination.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the NHS UK Pagination component from Nunjucks to Svelte 5. Here's what I've created:
 
 1. Pagination.svelte - Main Component
@@ -2347,16 +2347,16 @@ I'll help you convert this NHS UK Panel component from Nunjucks to Svelte 5. Let
 
 
 Panel.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the NHS UK Panel component from Nunjucks to Svelte 5. Here's what I've created:
 
 1. Panel.svelte - Main Component
@@ -2464,16 +2464,16 @@ I'll help you convert this NHS UK Radios component from Nunjucks to Svelte 5. Th
 
 
 Radios.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 
 
 

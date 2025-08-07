@@ -2,7 +2,7 @@ export const buttonConfig = {
   name: 'Button',
   variants: [
     'primary',
-    'secondary', 
+    'secondary',
     'secondary-solid',
     'warning',
     'login',

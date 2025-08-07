@@ -58,7 +58,7 @@
   import WarningCallout from './WarningCallout.svelte';
 </script>
 
-<WarningCallout 
+<WarningCallout
   heading="Important"
   text="For safety, tell your doctor about all medicines you're taking."
 />
@@ -66,7 +66,7 @@
 
 ### With Custom Heading:
 ```svelte
-<WarningCallout 
+<WarningCallout
   heading="Storage instructions"
   text="Store in a cool, dry place away from direct sunlight."
 />
@@ -74,7 +74,7 @@
 
 ### With HTML Content:
 ```svelte
-<WarningCallout 
+<WarningCallout
   heading="Side effects"
   html={`
     <p>Seek immediate help if you experience:</p>
@@ -106,14 +106,14 @@
   import { createWarningConfig, commonWarnings } from './config';
 </script>
 
-<WarningCallout 
+<WarningCallout
   {...createWarningConfig('pregnancy', commonWarnings.medicines.pregnancy)}
 />
 ```
 
 ### With Different Heading Level:
 ```svelte
-<WarningCallout 
+<WarningCallout
   heading="Section warning"
   headingLevel={4}
   text="This uses an H4 element for proper document structure."

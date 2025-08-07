@@ -135,13 +135,13 @@
     classes="nhsuk-expander"
     text="Information about appointments and booking."
   />
-  
+
   <Details
     summaryText="Prescriptions"
     classes="nhsuk-expander"
     text="Information about prescriptions and repeat prescriptions."
   />
-  
+
   <Details
     summaryText="Test results"
     classes="nhsuk-expander"

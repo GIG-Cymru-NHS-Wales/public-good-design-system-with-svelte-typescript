@@ -27,12 +27,12 @@
 
   // Generate ID if not provided
   const inputId = id || name;
-  
+
   // Build aria-describedby
   let ariaDescribedBy = describedBy || '';
   const hintId = hint && inputId ? `${inputId}-hint` : undefined;
   const errorId = errorMessage && inputId ? `${inputId}-error` : undefined;
-  
+
   if (hintId) {
     ariaDescribedBy = ariaDescribedBy ? `${ariaDescribedBy} ${hintId}` : hintId;
   }
@@ -68,7 +68,7 @@
     attributes={label.attributes}
     for={inputId}
   />
-  
+
   {#if hint}
     <Hint
       id={hintId}
@@ -78,7 +78,7 @@
       text={hint.text}
     />
   {/if}
-  
+
   {#if errorMessage}
     <ErrorMessage
       id={errorId}
@@ -87,7 +87,7 @@
       text={errorMessage.text}
     />
   {/if}
-  
+
   {#if prefix || suffix}
     <div class="nhsuk-input__wrapper">
       {#if prefix}

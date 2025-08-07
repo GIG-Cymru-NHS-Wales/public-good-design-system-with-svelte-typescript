@@ -133,12 +133,12 @@
   const formattedMessage = $derived(() => {
     const remaining = remainingCount;
     const displayNumber = Math.abs(remaining);
-    
+
     let noun = isWordCount ? 'word' : 'character';
     noun += displayNumber === 1 ? '' : 's';
-    
+
     const verb = remaining < 0 ? 'too many' : 'remaining';
-    
+
     return `You have ${displayNumber} ${noun} ${verb}`;
   });
 
@@ -186,7 +186,7 @@
         checkIfValueChanged();
       }
     }, 1000);
-    
+
     dispatch('focus', event);
   }
 
@@ -196,7 +196,7 @@
       clearInterval(valueChecker);
       valueChecker = null;
     }
-    
+
     dispatch('blur', event);
   }
 
@@ -222,10 +222,10 @@
   onMount(() => {
     // Set initial old value
     oldValue = value;
-    
+
     // Handle browser back navigation
     window.addEventListener('pageshow', handlePageShow);
-    
+
     return () => {
       window.removeEventListener('pageshow', handlePageShow);
     };
@@ -238,8 +238,8 @@
   });
 </script>
 
-<div 
-  class="nhsuk-character-count" 
+<div
+  class="nhsuk-character-count"
   data-module="nhsuk-character-count"
   data-maxlength={maxlength}
   data-maxwords={maxwords}
@@ -298,15 +298,15 @@
     ></textarea>
 
     <!-- Static fallback message (hidden when JS runs) -->
-    <div 
-      class="nhsuk-hint nhsuk-character-count__message nhsuk-u-visually-hidden{countMessage?.classes ? ` ${countMessage.classes}` : ''}" 
+    <div
+      class="nhsuk-hint nhsuk-character-count__message nhsuk-u-visually-hidden{countMessage?.classes ? ` ${countMessage.classes}` : ''}"
       id={infoId}
     >
       {staticMessage}
     </div>
 
     <!-- Dynamic count message (visible) -->
-    <div 
+    <div
       class="{countClasses} {countVisibilityClasses}"
       aria-hidden="true"
     >
@@ -314,7 +314,7 @@
     </div>
 
     <!-- Screen reader count message -->
-    <div 
+    <div
       class="nhsuk-character-count__sr-status nhsuk-u-visually-hidden"
       aria-live="polite"
       aria-hidden={!isOverThreshold}

@@ -266,7 +266,7 @@
 
 <div class="examples">
   <h1>NHS UK Table Component Examples</h1>
-  
+
   <section>
     <h2>Default Table</h2>
     <Table {...defaultExample} />

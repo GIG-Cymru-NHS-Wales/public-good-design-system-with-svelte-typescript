@@ -4,7 +4,7 @@
 
 <div class="example-container">
   <h2>Label Examples</h2>
-  
+
   <section class="example">
     <h3>Default Label</h3>
     <Label text="NHS number" for="nhs-number" />
@@ -13,9 +13,9 @@
 
   <section class="example">
     <h3>Label with Bold Text (Small)</h3>
-    <Label 
-      classes="nhsuk-label--s" 
-      text="NHS number" 
+    <Label
+      classes="nhsuk-label--s"
+      text="NHS number"
       for="nhs-number-bold"
     />
     <input class="nhsuk-input" id="nhs-number-bold" name="nhs-number-bold" type="text">
@@ -23,9 +23,9 @@
 
   <section class="example">
     <h3>Label as Page Heading (Extra Large)</h3>
-    <Label 
-      text="What is your NHS number?" 
-      classes="nhsuk-label--xl" 
+    <Label
+      text="What is your NHS number?"
+      classes="nhsuk-label--xl"
       isPageHeading={true}
       for="nhs-number-xl"
     />
@@ -37,46 +37,46 @@
 
   <section class="example">
     <h3>Different Label Sizes</h3>
-    
+
     <div class="sub-example">
-      <Label 
-        text="Extra large label" 
-        classes="nhsuk-label--xl" 
+      <Label
+        text="Extra large label"
+        classes="nhsuk-label--xl"
         for="input-xl"
       />
       <input class="nhsuk-input" id="input-xl" name="input-xl" type="text">
     </div>
 
     <div class="sub-example">
-      <Label 
-        text="Large label" 
-        classes="nhsuk-label--l" 
+      <Label
+        text="Large label"
+        classes="nhsuk-label--l"
         for="input-l"
       />
       <input class="nhsuk-input" id="input-l" name="input-l" type="text">
     </div>
 
     <div class="sub-example">
-      <Label 
-        text="Medium label" 
-        classes="nhsuk-label--m" 
+      <Label
+        text="Medium label"
+        classes="nhsuk-label--m"
         for="input-m"
       />
       <input class="nhsuk-input" id="input-m" name="input-m" type="text">
     </div>
 
     <div class="sub-example">
-      <Label 
-        text="Small label" 
-        classes="nhsuk-label--s" 
+      <Label
+        text="Small label"
+        classes="nhsuk-label--s"
         for="input-s"
       />
       <input class="nhsuk-input" id="input-s" name="input-s" type="text">
     </div>
 
     <div class="sub-example">
-      <Label 
-        text="Default label" 
+      <Label
+        text="Default label"
         for="input-default"
       />
       <input class="nhsuk-input" id="input-default" name="input-default" type="text">
@@ -85,8 +85,8 @@
 
   <section class="example">
     <h3>Label with HTML Content</h3>
-    <Label 
-      html="Email address <span class='nhsuk-u-visually-hidden'>(required)</span>" 
+    <Label
+      html="Email address <span class='nhsuk-u-visually-hidden'>(required)</span>"
       for="email"
     />
     <input class="nhsuk-input" id="email" name="email" type="email">
@@ -94,9 +94,9 @@
 
   <section class="example">
     <h3>Label with Custom Classes</h3>
-    <Label 
-      text="Custom styled label" 
-      classes="nhsuk-label--m custom-label-class" 
+    <Label
+      text="Custom styled label"
+      classes="nhsuk-label--m custom-label-class"
       for="custom-input"
     />
     <input class="nhsuk-input" id="custom-input" name="custom-input" type="text">
@@ -104,8 +104,8 @@
 
   <section class="example">
     <h3>Label with Custom Attributes</h3>
-    <Label 
-      text="Label with data attributes" 
+    <Label
+      text="Label with data attributes"
       for="data-input"
       attributes={{
         'data-test': 'label-component',
@@ -120,26 +120,26 @@
     <h3>Multiple Labels in a Form</h3>
     <form>
       <div class="nhsuk-form-group">
-        <Label 
-          text="First name" 
+        <Label
+          text="First name"
           classes="nhsuk-label--s"
           for="first-name"
         />
         <input class="nhsuk-input" id="first-name" name="first-name" type="text">
       </div>
-      
+
       <div class="nhsuk-form-group">
-        <Label 
-          text="Last name" 
+        <Label
+          text="Last name"
           classes="nhsuk-label--s"
           for="last-name"
         />
         <input class="nhsuk-input" id="last-name" name="last-name" type="text">
       </div>
-      
+
       <div class="nhsuk-form-group">
-        <Label 
-          text="Date of birth" 
+        <Label
+          text="Date of birth"
           classes="nhsuk-label--s"
           for="dob"
         />
@@ -153,7 +153,7 @@
 
   <section class="example">
     <h3>Label for Different Input Types</h3>
-    
+
     <div class="sub-example">
       <Label text="Choose an option" for="select-example" />
       <select class="nhsuk-select" id="select-example" name="select-example">
@@ -172,8 +172,8 @@
     <div class="sub-example">
       <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend">
-          <Label 
-            text="Do you know your NHS number?" 
+          <Label
+            text="Do you know your NHS number?"
             classes="nhsuk-label--m"
             isPageHeading={true}
           />

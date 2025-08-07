@@ -64,20 +64,20 @@
 </script>
 
 <!-- Basic contents list -->
-<ContentsList 
+<ContentsList
   items={amdGuideItems}
   on:navigate={handleNavigation}
 />
 
 <!-- Dynamic contents list with current page detection -->
-<ContentsList 
+<ContentsList
   items={dynamicItems}
   ariaLabel="Guide navigation"
   on:navigate={handleNavigation}
 />
 
 <!-- Contents list with custom styling -->
-<ContentsList 
+<ContentsList
   items={guideItems}
   classes="custom-contents-list"
   attributes={{

@@ -10,11 +10,11 @@
 
 <div class="example-container">
   <h2>Header Examples</h2>
-  
+
   <section class="example">
     <h3>Default Header</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         logo={{ href: '#' }}
         search={true}
         navigation={{
@@ -33,7 +33,7 @@
   <section class="example">
     <h3>Header with Navigation</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         logo={{ href: '#' }}
         navigation={{
           items: [
@@ -52,7 +52,7 @@
   <section class="example">
     <h3>Header with White Navigation</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         logo={{ href: '#' }}
         navigation={{
           classes: 'nhsuk-header__navigation--white',
@@ -72,7 +72,7 @@
   <section class="example">
     <h3>Header with Search</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         logo={{ href: '#' }}
         search={true}
       />
@@ -82,7 +82,7 @@
   <section class="example">
     <h3>Header with Account (Logged In)</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         service={{
           href: '#',
           text: 'Manage patients'
@@ -107,7 +107,7 @@
   <section class="example">
     <h3>Header with Account (Logged Out)</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         service={{
           href: '#',
           text: 'Manage patients'
@@ -127,7 +127,7 @@
   <section class="example">
     <h3>Complex Header with Account, Search, and Navigation</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         service={{
           href: '#',
           text: 'Manage patients'
@@ -170,7 +170,7 @@
   <section class="example">
     <h3>Header with Service Name and Current Page</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         logo={{ href: '#' }}
         service={{
           text: 'Digital service manual',
@@ -195,7 +195,7 @@
   <section class="example">
     <h3>Organisational Header</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         logo={{ href: '#' }}
         organisation={{
           name: 'Anytown Anyplace',
@@ -221,7 +221,7 @@
   <section class="example">
     <h3>White Header Variant</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         classes="nhsuk-header--white"
         logo={{ href: '#' }}
         service={{
@@ -236,7 +236,7 @@
   <section class="example">
     <h3>White Organisational Header</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         classes="nhsuk-header--white"
         logo={{ href: '#' }}
         organisation={{
@@ -263,7 +263,7 @@
   <section class="example">
     <h3>Header with Custom Logo</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         classes="nhsuk-header--white"
         logo={{
           href: '#',
@@ -294,7 +294,7 @@
   <section class="example">
     <h3>Header with Justified Navigation</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         logo={{ href: '#' }}
         navigation={{
           classes: 'nhsuk-header__navigation--justified',
@@ -314,7 +314,7 @@
   <section class="example">
     <h3>Header with Long Service Name</h3>
     <div class="example-wrapper">
-      <Header 
+      <Header
         logo={{
           href: '#nhs',
           ariaLabel: 'NHS homepage'

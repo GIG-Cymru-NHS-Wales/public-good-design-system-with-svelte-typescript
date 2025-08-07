@@ -9,7 +9,7 @@
 </script>
 
 <!-- Basic card -->
-<Card 
+<Card
   heading="If you need help now, but it's not an emergency"
   headingLevel={3}
   on:click={handleCardClick}
@@ -22,7 +22,7 @@
 </Card>
 
 <!-- Care cards -->
-<Card 
+<Card
   heading="Speak to a GP if:"
   headingLevel={3}
   type="non-urgent"
@@ -38,7 +38,7 @@
   {/snippet}
 </Card>
 
-<Card 
+<Card
   heading="Ask for an urgent GP appointment if:"
   headingLevel={3}
   type="urgent"
@@ -54,7 +54,7 @@
   {/snippet}
 </Card>
 
-<Card 
+<Card
   heading="Call 999 if you have sudden chest pain that:"
   headingLevel={3}
   type="emergency"
@@ -70,7 +70,7 @@
 </Card>
 
 <!-- Primary card with chevron -->
-<Card 
+<Card
   href="/breast-screening"
   primary={true}
   clickable={true}
@@ -79,7 +79,7 @@
 />
 
 <!-- Primary card with description -->
-<Card 
+<Card
   href="/care-support"
   primary={true}
   clickable={true}
@@ -89,7 +89,7 @@
 />
 
 <!-- Clickable card -->
-<Card 
+<Card
   href="/care-support"
   clickable={true}
   heading="Introduction to care and support"
@@ -98,7 +98,7 @@
 />
 
 <!-- Secondary card -->
-<Card 
+<Card
   href="/urgent-emergency"
   clickable={true}
   secondary={true}
@@ -108,7 +108,7 @@
 />
 
 <!-- Feature card -->
-<Card 
+<Card
   feature={true}
   href="/feature"
   heading="Feature card heading"
@@ -117,7 +117,7 @@
 />
 
 <!-- Card with image -->
-<Card 
+<Card
   imgURL="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg"
   imgALT="People exercising"
   href="/exercise"
@@ -128,7 +128,7 @@
 />
 
 <!-- Top task card -->
-<Card 
+<Card
   href="/prescriptions"
   clickable={true}
   headingLevel={5}
@@ -138,7 +138,7 @@
 />
 
 <!-- Card with HTML content -->
-<Card 
+<Card
   heading="Help from NHS 111"
   headingLevel={3}
 >

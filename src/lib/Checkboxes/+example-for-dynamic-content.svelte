@@ -26,12 +26,12 @@
 
   // Reactive validation
   $: isValid = selectedServices.length > 0;
-  $: errorMessage = !isValid && selectedServices.length === 0 ? 
+  $: errorMessage = !isValid && selectedServices.length === 0 ?
     'Please select at least one service' : null;
 
   function handleServiceChange(event: CustomEvent) {
     console.log('Selected services:', event.detail.values);
-    
+
     // Custom business logic
     if (event.detail.values.includes('premium') && event.detail.values.includes('basic')) {
       // Auto-remove basic if premium is selected

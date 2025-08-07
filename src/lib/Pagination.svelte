@@ -12,7 +12,7 @@
   }: PaginationProps = $props();
 </script>
 
-<nav 
+<nav
   class="nhsuk-pagination{classes ? ` ${classes}` : ''}"
   role="navigation"
   aria-label="Pagination"

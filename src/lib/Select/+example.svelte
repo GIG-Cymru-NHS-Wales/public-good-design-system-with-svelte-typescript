@@ -18,7 +18,7 @@
 
 <div class="example-container">
   <h2>Select Examples</h2>
-  
+
   <section class="example">
     <h3>Default Select</h3>
     <Select
@@ -327,7 +327,7 @@
             }))
           ]}
         />
-        
+
         <Select
           bind:value={multipleValues.month}
           name="dob-month"
@@ -350,7 +350,7 @@
             { value: '12', text: 'December' }
           ]}
         />
-        
+
         <Select
           bind:value={multipleValues.year}
           name="dob-year"

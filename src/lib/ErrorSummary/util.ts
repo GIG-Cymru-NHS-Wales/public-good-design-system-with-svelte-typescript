@@ -6,6 +6,6 @@ export function getFragmentFromUrl(url: string): string | null {
   if (!url || url.indexOf('#') === -1) {
     return null;
   }
-  
+
   return url.split('#').pop() || null;
 }

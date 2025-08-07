@@ -54,7 +54,7 @@
 
 1. Responsive Typography: The hint text scales from 19px on mobile to 22px on desktop
 
-2. Contextual Spacing: 
+2. Contextual Spacing:
    - Default margin-bottom of 24px
    - Reduced to 16px when following small labels or legends
    - Negative top margin when following a fieldset legend

@@ -2,7 +2,7 @@
   {#snippet children()}
     <CardGroupItem>
       {#snippet children()}
-        <Card 
+        <Card
           href="/service-1"
           clickable={true}
           heading="Service 1"
@@ -11,10 +11,10 @@
         />
       {/snippet}
     </CardGroupItem>
-    
+
     <CardGroupItem>
       {#snippet children()}
-        <Card 
+        <Card
           href="/service-2"
           clickable={true}
           heading="Service 2"
@@ -23,10 +23,10 @@
         />
       {/snippet}
     </CardGroupItem>
-    
+
     <CardGroupItem>
       {#snippet children()}
-        <Card 
+        <Card
           href="/service-3"
           clickable={true}
           heading="Service 3"

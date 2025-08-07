@@ -4,7 +4,7 @@
 
 <div class="example-container">
   <h2>Panel Examples</h2>
-  
+
   <section class="example">
     <h3>Default Panel</h3>
     <Panel
@@ -51,7 +51,7 @@
 
   <section class="example">
     <h3>Panel with Different Heading Levels</h3>
-    
+
     <div class="sub-example">
       <Panel
         titleText="H1 Heading (Default)"
@@ -124,7 +124,7 @@
     <h3>Long Content Panel</h3>
     <Panel titleText="Important information about your treatment">
       <p>Your treatment plan has been approved by your healthcare team. This comprehensive plan includes several stages designed to provide the best possible outcome for your condition.</p>
-      
+
       <h4>Treatment schedule:</h4>
       <ol>
         <li>Initial consultation - Complete</li>
@@ -133,9 +133,9 @@
         <li>First treatment session - Scheduled for next week</li>
         <li>Follow-up appointments - To be scheduled</li>
       </ol>
-      
+
       <p>If you have any questions about your treatment plan, please contact your care coordinator on 0123 456 7890.</p>
-      
+
       <p>Remember to bring your patient information pack to all appointments.</p>
     </Panel>
   </section>

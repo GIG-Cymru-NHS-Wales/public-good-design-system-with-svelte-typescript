@@ -55,7 +55,7 @@
   import TaskList from './TaskList.svelte';
 </script>
 
-<TaskList 
+<TaskList
   items={[
     {
       title: { text: 'Complete form' },
@@ -87,7 +87,7 @@
   import { createTaskStatus } from './config';
 </script>
 
-<TaskList 
+<TaskList
   items={[
     {
       title: { text: 'Step 1' },
@@ -112,7 +112,7 @@
 <script>
   import TaskList from './TaskList.svelte';
   import { taskListPatterns, createTaskStatus } from './config';
-  
+
   // Convert pattern to task items
   const tasks = taskListPatterns.healthAssessment.map(item => ({
     title: { text: item.title },

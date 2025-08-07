@@ -16,13 +16,13 @@
   function handleSubmit() {
     return async ({ result, update }) => {
       isSubmitting = false;
-      
+
       if (result.type === 'failure') {
         errors = result.data?.errors || {};
       } else {
         errors = {};
       }
-      
+
       await update();
     };
   }
@@ -30,32 +30,32 @@
   // Client-side validation
   function validateForm() {
     const newErrors: Record<string, string> = {};
-    
+
     if (!isValidDate(formData.dateOfBirth)) {
       newErrors.dateOfBirth = 'Please enter a valid date of birth';
     }
-    
+
     if (!isValidDate(formData.startDate)) {
       newErrors.startDate = 'Please enter a valid start date';
     }
-    
+
     errors = newErrors;
     return Object.keys(newErrors).length === 0;
   }
 
   function isValidDate(dateValues: DateValues): boolean {
     const { day, month, year } = dateValues;
-    
+
     if (!day || !month || !year) return false;
-    
+
     const dayNum = parseInt(day, 10);
     const monthNum = parseInt(month, 10);
     const yearNum = parseInt(year, 10);
-    
+
     if (dayNum < 1 || dayNum > 31) return false;
     if (monthNum < 1 || monthNum > 12) return false;
     if (yearNum < 1900 || yearNum > new Date().getFullYear()) return false;
-    
+
     return true;
   }
 

@@ -11,7 +11,7 @@
   }: InsetTextProps = $props();
 </script>
 
-<div 
+<div
   class="nhsuk-inset-text{classes ? ` ${classes}` : ''}"
   {...parseAttributes(attributes)}
 >

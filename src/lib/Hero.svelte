@@ -49,7 +49,7 @@
   }
 </script>
 
-<section 
+<section
   class={heroClasses}
   style={imageURL ? `background-image: url('${imageURL}');` : undefined}
   {...parseAttributes(attributes)}
@@ -57,7 +57,7 @@
   {#if hasImage}
     <div class="nhsuk-hero__overlay">
   {/if}
-  
+
   {#if hasContent}
     <div class={fullContainerClasses}>
       <div class="nhsuk-grid-row">
@@ -78,7 +78,7 @@
                 <h6 class={fullHeadingClasses}>{heading}</h6>
               {/if}
             {/if}
-            
+
             {#if children}
               {@render children()}
             {:else if html}
@@ -86,7 +86,7 @@
             {:else if text}
               <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{text}</p>
             {/if}
-            
+
             {#if hasImage}
               <span class="nhsuk-hero__arrow" aria-hidden="true"></span>
             {/if}
@@ -95,7 +95,7 @@
       </div>
     </div>
   {/if}
-  
+
   {#if hasImage}
     </div>
   {/if}

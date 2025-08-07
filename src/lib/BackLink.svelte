@@ -103,7 +103,7 @@
   .nhsuk-back-link {
     padding-top: nhsuk-spacing(3);
     line-height: 1; /* [4] */
-    
+
     @include nhsuk-media-query($from: tablet) {
       padding-top: nhsuk-spacing(4);
     }
@@ -126,7 +126,7 @@
       position: absolute;
       top: -1px; /* [3] */
       width: 24px;
-      
+
       @include nhsuk-media-query($from: tablet) {
         top: 0; /* [3] */
       }

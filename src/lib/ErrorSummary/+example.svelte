@@ -4,7 +4,7 @@
 
 <div class="example-container">
   <h1>Error Summary Component Examples</h1>
-  
+
   <section>
     <h2>Default Error Summary</h2>
     <ErrorSummary
@@ -16,7 +16,7 @@
         }
       ]}
     />
-    
+
     <!-- Example form field -->
     <div class="form-group">
       <label for="dob-error">Date of birth</label>
@@ -41,14 +41,14 @@
         }
       ]}
     />
-    
+
     <!-- Example form fields -->
     <div class="form-group">
       <label for="firstname">First name</label>
       <span class="error-message">Enter your first name</span>
       <input type="text" id="firstname" class="form-input error" />
     </div>
-    
+
     <div class="form-group">
       <label for="lastname">Last name</label>
       <span class="error-message">Enter your last name</span>

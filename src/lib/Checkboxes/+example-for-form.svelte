@@ -15,13 +15,13 @@
   function handleSubmit() {
     return async ({ result, update }) => {
       isSubmitting = false;
-      
+
       if (result.type === 'failure') {
         errors = result.data?.errors || {};
       } else {
         errors = {};
       }
-      
+
       await update();
     };
   }
@@ -29,15 +29,15 @@
   // Client-side validation
   function validateForm() {
     const newErrors: Record<string, string> = {};
-    
+
     if (formData.interests.length === 0) {
       newErrors.interests = 'Please select at least one interest';
     }
-    
+
     if (formData.contact.length === 0) {
       newErrors.contact = 'Please select how you would like to be contacted';
     }
-    
+
     errors = newErrors;
     return Object.keys(newErrors).length === 0;
   }

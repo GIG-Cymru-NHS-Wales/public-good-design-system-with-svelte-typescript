@@ -14,7 +14,7 @@
 
 <div class="example-container">
   <h2>Input Examples</h2>
-  
+
   <section class="example">
     <h3>Default Input</h3>
     <Input
@@ -65,7 +65,7 @@
 
   <section class="example">
     <h3>Input with Width Modifiers</h3>
-    
+
     <div class="sub-example">
       <Input
         label={{ text: 'Width 30 characters' }}
@@ -202,7 +202,7 @@
 
   <section class="example">
     <h3>Different Input Types</h3>
-    
+
     <div class="sub-example">
       <Input
         label={{ text: 'Email address' }}

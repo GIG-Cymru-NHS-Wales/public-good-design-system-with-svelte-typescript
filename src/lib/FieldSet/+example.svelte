@@ -5,7 +5,7 @@
 
 <div class="example-container">
   <h2>Fieldset Examples</h2>
-  
+
   <section class="example">
     <h3>Default Fieldset</h3>
     <Fieldset legend={{ text: 'What is your address?' }} />
@@ -13,7 +13,7 @@
 
   <section class="example">
     <h3>Fieldset as Page Heading</h3>
-    <Fieldset 
+    <Fieldset
       legend={{
         text: 'What is your address?',
         classes: 'nhsuk-fieldset__legend--xl',
@@ -24,7 +24,7 @@
 
   <section class="example">
     <h3>Fieldset with Inputs</h3>
-    <Fieldset 
+    <Fieldset
       legend={{
         text: 'What is your address?',
         classes: 'nhsuk-fieldset__legend--xl',
@@ -36,19 +36,19 @@
         id="input-address1"
         name="address1"
       />
-      
+
       <Input
         label={{ text: 'Address line 2' }}
         id="input-address2"
         name="address2"
       />
-      
+
       <Input
         label={{ text: 'Town or city' }}
         id="input-town-city"
         name="town"
       />
-      
+
       <Input
         label={{ text: 'County' }}
         id="input-county"
@@ -59,10 +59,10 @@
 
   <section class="example">
     <h3>Fieldset with Different Legend Sizes</h3>
-    
+
     <div class="sub-example">
       <h4>Extra Large Legend</h4>
-      <Fieldset 
+      <Fieldset
         legend={{
           text: 'Extra large legend',
           classes: 'nhsuk-fieldset__legend--xl'
@@ -72,7 +72,7 @@
 
     <div class="sub-example">
       <h4>Large Legend</h4>
-      <Fieldset 
+      <Fieldset
         legend={{
           text: 'Large legend',
           classes: 'nhsuk-fieldset__legend--l'
@@ -82,7 +82,7 @@
 
     <div class="sub-example">
       <h4>Medium Legend</h4>
-      <Fieldset 
+      <Fieldset
         legend={{
           text: 'Medium legend',
           classes: 'nhsuk-fieldset__legend--m'
@@ -92,7 +92,7 @@
 
     <div class="sub-example">
       <h4>Small Legend</h4>
-      <Fieldset 
+      <Fieldset
         legend={{
           text: 'Small legend',
           classes: 'nhsuk-fieldset__legend--s'
@@ -103,7 +103,7 @@
 
   <section class="example">
     <h3>Fieldset with HTML Legend</h3>
-    <Fieldset 
+    <Fieldset
       legend={{
         html: '<span>Legend with <strong>HTML</strong> content</span>',
         classes: 'nhsuk-fieldset__legend--m'
@@ -113,7 +113,7 @@
 
   <section class="example">
     <h3>Fieldset with Custom Attributes</h3>
-    <Fieldset 
+    <Fieldset
       legend={{ text: 'Custom attributes example' }}
       attributes={{
         'data-module': 'custom-fieldset',

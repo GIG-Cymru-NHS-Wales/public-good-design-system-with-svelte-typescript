@@ -5,11 +5,11 @@
 
 <div class="example-container">
   <h2>Hero Examples</h2>
-  
+
   <section class="example">
     <h3>Default Hero</h3>
     <div class="example-wrapper">
-      <Hero 
+      <Hero
         heading="We're here for you"
         text="Helping you take control of your health and wellbeing."
       />
@@ -19,7 +19,7 @@
   <section class="example">
     <h3>Hero with Image Only</h3>
     <div class="example-wrapper">
-      <Hero 
+      <Hero
         imageURL="https://assets.nhs.uk/prod/images/S_0818_homepage_hero_1_F0147446.width-1000.jpg"
       />
     </div>
@@ -28,7 +28,7 @@
   <section class="example">
     <h3>Hero with Image and Content</h3>
     <div class="example-wrapper">
-      <Hero 
+      <Hero
         heading="We're here for you"
         text="Helping you take control of your health and wellbeing."
         imageURL="https://assets.nhs.uk/prod/images/S_0818_homepage_hero_1_F0147446.width-1000.jpg"
@@ -39,7 +39,7 @@
   <section class="example">
     <h3>Hero with HTML Content</h3>
     <div class="example-wrapper">
-      <Hero 
+      <Hero
         heading="This is a header for the product or service"
         headingClasses="nhsuk-heading-l nhsuk-u-margin-top-5"
         html={`
@@ -64,7 +64,7 @@
   <section class="example">
     <h3>Hero with Different Heading Levels</h3>
     <div class="example-wrapper">
-      <Hero 
+      <Hero
         heading="This is an H2 heading"
         headingLevel={2}
         text="You can change the heading level while maintaining the same visual style."
@@ -75,7 +75,7 @@
   <section class="example">
     <h3>Hero without Content</h3>
     <div class="example-wrapper">
-      <Hero 
+      <Hero
         heading="Just a heading"
       />
     </div>
@@ -84,7 +84,7 @@
   <section class="example">
     <h3>Hero with Custom Classes</h3>
     <div class="example-wrapper">
-      <Hero 
+      <Hero
         heading="Custom styled hero"
         text="This hero has custom classes applied."
         classes="custom-hero-class"
@@ -100,13 +100,13 @@
   <section class="example">
     <h3>Hero with Long Content and Image</h3>
     <div class="example-wrapper">
-      <Hero 
+      <Hero
         heading="Comprehensive Health Information"
         imageURL="https://assets.nhs.uk/prod/images/S_0818_homepage_hero_1_F0147446.width-1000.jpg"
       >
         <p class="nhsuk-body-l">
-          Access trusted health information and services online. 
-          Find out what to do about common health problems, 
+          Access trusted health information and services online.
+          Find out what to do about common health problems,
           get advice on healthy living, and learn about conditions and treatments.
         </p>
         <ul>
@@ -123,7 +123,7 @@
   <section class="example">
     <h3>Hero with Multiple Elements</h3>
     <div class="example-wrapper">
-      <Hero 
+      <Hero
         heading="COVID-19 Vaccination Service"
         headingClasses="nhsuk-heading-xl"
       >

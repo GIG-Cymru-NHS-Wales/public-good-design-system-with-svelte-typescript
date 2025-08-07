@@ -13,7 +13,7 @@
 </script>
 
 <!-- Navigation buttons -->
-<Button 
+<Button
   text="Go Home"
   href="/"
   attributes={{
@@ -23,14 +23,14 @@
 />
 
 <!-- Programmatic navigation -->
-<Button 
+<Button
   text="Navigate"
   type="button"
   on:click={() => handleNavigation('/dashboard')}
 />
 
 <!-- Refresh data -->
-<Button 
+<Button
   text="Refresh"
   type="button"
   classes="nhsuk-button--secondary"
@@ -39,7 +39,7 @@
 
 <!-- Conditional button based on route -->
 {#if $page.route.id === '/admin'}
-  <Button 
+  <Button
     text="Admin Actions"
     classes="nhsuk-button--warning"
     href="/admin/actions"

@@ -4,7 +4,7 @@
 
 <div class="example-container">
   <h1>Do and Don't List Component Examples</h1>
-  
+
   <section>
     <h2>Default Example - Do List</h2>
     <DoAndDontList

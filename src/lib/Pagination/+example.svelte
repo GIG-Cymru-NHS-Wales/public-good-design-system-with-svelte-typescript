@@ -4,7 +4,7 @@
 
 <div class="example-container">
   <h2>Pagination Examples</h2>
-  
+
   <section class="example">
     <h3>Default Pagination</h3>
     <Pagination

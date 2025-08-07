@@ -179,13 +179,13 @@
   function progressToNextStep() {
     if (currentStep < interactiveTasks.length) {
       updateTaskStatus(currentStep, 'completed');
-      
+
       if (currentStep + 1 < interactiveTasks.length) {
         if (interactiveTasks[currentStep + 1].status.text === 'Cannot start yet') {
           updateTaskStatus(currentStep + 1, 'incomplete');
         }
       }
-      
+
       currentStep++;
     }
   }
@@ -212,7 +212,7 @@
   <section>
     <h2>Default Example - Health Assessment</h2>
     <p>A typical health assessment process with various task statuses.</p>
-    <TaskList 
+    <TaskList
       items={defaultExample}
       idPrefix="your-health"
     />
@@ -221,7 +221,7 @@
   <section>
     <h2>Application Process</h2>
     <p>Shows an application workflow using the helper functions.</p>
-    <TaskList 
+    <TaskList
       items={applicationExample}
       idPrefix="application"
     />
@@ -230,7 +230,7 @@
   <section>
     <h2>Registration with HTML Content</h2>
     <p>Task list items can include HTML content for richer formatting.</p>
-    <TaskList 
+    <TaskList
       items={registrationExample}
       idPrefix="registration"
     />
@@ -239,24 +239,24 @@
   <section>
     <h2>Interactive Example</h2>
     <p>Click the button to progress through the tasks.</p>
-    
+
     <div class="controls">
-      <button 
+      <button
         onclick={progressToNextStep}
         disabled={currentStep >= interactiveTasks.length}
         class="nhsuk-button"
       >
         {currentStep >= interactiveTasks.length ? 'All tasks completed!' : 'Complete current task'}
       </button>
-      <button 
+      <button
         onclick={resetProgress}
         class="nhsuk-button nhsuk-button--secondary"
       >
         Reset progress
       </button>
     </div>
-    
-    <TaskList 
+
+    <TaskList
       items={interactiveTasks}
       idPrefix="interactive"
     />
@@ -265,21 +265,21 @@
   <section>
     <h2>Task List Patterns</h2>
     <p>Pre-configured patterns for common use cases.</p>
-    
+
     <h3>Health Assessment Pattern</h3>
-    <TaskList 
+    <TaskList
       items={createTasksFromPattern(taskListPatterns.healthAssessment)}
       idPrefix="pattern-health"
     />
-    
+
     <h3>Application Pattern</h3>
-    <TaskList 
+    <TaskList
       items={createTasksFromPattern(taskListPatterns.application)}
       idPrefix="pattern-app"
     />
-    
+
     <h3>Registration Pattern</h3>
-    <TaskList 
+    <TaskList
       items={createTasksFromPattern(taskListPatterns.registration)}
       idPrefix="pattern-reg"
     />
@@ -288,7 +288,7 @@
   <section>
     <h2>Without Links</h2>
     <p>Tasks don't have to be links - useful for displaying status only.</p>
-    <TaskList 
+    <TaskList
       items={[
         {
           title: { text: 'Morning medication' },
@@ -311,10 +311,10 @@
   <section>
     <h2>Custom Classes and Attributes</h2>
     <p>Additional customization options for the task list.</p>
-    <TaskList 
+    <TaskList
       items={[
         {
-          title: { 
+          title: {
             text: 'Custom styled title',
             classes: 'custom-title-class'
           },
@@ -344,7 +344,7 @@
       <li>Hover states for interactive elements</li>
       <li>Screen reader friendly status announcements</li>
     </ul>
-    
+
     <p>Try navigating the task list with your keyboard - the entire row is clickable for linked tasks.</p>
   </section>
 </div>

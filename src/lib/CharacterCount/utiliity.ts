@@ -59,7 +59,7 @@ export function announceCharacterCount(
   const remaining = limit - currentCount;
   const unit = isWords ? 'word' : 'character';
   const units = isWords ? 'words' : 'characters';
-  
+
   let message: string;
   if (remaining === 1) {
     message = `You have 1 ${unit} remaining`;
@@ -77,7 +77,7 @@ export function announceCharacterCount(
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'nhsuk-u-visually-hidden';
   announcement.textContent = message;
-  
+
   document.body.appendChild(announcement);
   setTimeout(() => {
     document.body.removeChild(announcement);

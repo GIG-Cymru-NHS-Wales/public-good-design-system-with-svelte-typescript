@@ -64,8 +64,8 @@
 <Tag html="<em>Important</em>" color="red" />
 
 <!-- With custom attributes -->
-<Tag 
-  text="Custom" 
+<Tag
+  text="Custom"
   color="green"
   attributes={{ 'data-id': '123' }}
   classes="my-custom-class"

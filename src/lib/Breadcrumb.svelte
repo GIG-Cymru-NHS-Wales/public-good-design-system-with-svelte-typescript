@@ -53,8 +53,8 @@
   });
 </script>
 
-<nav 
-  class="nhsuk-breadcrumb{classes ? ` ${classes}` : ''}" 
+<nav
+  class="nhsuk-breadcrumb{classes ? ` ${classes}` : ''}"
   aria-label={labelText}
   {...attributes}
 >
@@ -62,8 +62,8 @@
     {#each allItems as item, index}
       <li class="nhsuk-breadcrumb__item{item.classes ? ` ${item.classes}` : ''}">
         {#if item.href}
-          <a 
-            class="nhsuk-breadcrumb__link" 
+          <a
+            class="nhsuk-breadcrumb__link"
             href={item.href}
             {...(item.attributes || {})}
           >
@@ -75,10 +75,10 @@
       </li>
     {/each}
   </ol>
-  
+
   <p class="nhsuk-breadcrumb__back">
-    <a 
-      class="nhsuk-breadcrumb__backlink" 
+    <a
+      class="nhsuk-breadcrumb__backlink"
       href={lastItem().href}
       {...(lastItem().attributes || {})}
     >

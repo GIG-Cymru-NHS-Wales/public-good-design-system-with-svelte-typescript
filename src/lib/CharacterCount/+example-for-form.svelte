@@ -14,13 +14,13 @@
   function handleSubmit() {
     return async ({ result, update }) => {
       isSubmitting = false;
-      
+
       if (result.type === 'failure') {
         errors = result.data?.errors || {};
       } else {
         errors = {};
       }
-      
+
       await update();
     };
   }
@@ -28,15 +28,15 @@
   // Client-side validation
   function validateForm() {
     const newErrors: Record<string, string> = {};
-    
+
     if (!formData.feedback.trim()) {
       newErrors.feedback = 'Feedback is required';
     }
-    
+
     if (formData.comments.length > 200) {
       newErrors.comments = 'Comments must be 200 characters or less';
     }
-    
+
     errors = newErrors;
     return Object.keys(newErrors).length === 0;
   }

@@ -108,7 +108,7 @@
     if (items.length > 0) {
       return items;
     }
-    
+
     return [
       {
         name: 'day',
@@ -116,7 +116,7 @@
         value: values.day || ''
       },
       {
-        name: 'month', 
+        name: 'month',
         classes: 'nhsuk-input--width-2',
         value: values.month || ''
       },
@@ -145,7 +145,7 @@
   function handleInput(event: Event, itemName: string) {
     const target = event.target as HTMLInputElement;
     const newValue = target.value;
-    
+
     // Update values object
     values = {
       ...values,
@@ -196,7 +196,7 @@
 
 <div class="nhsuk-form-group{errorMessage ? ' nhsuk-form-group--error' : ''}{formGroup?.classes ? ` ${formGroup.classes}` : ''}">
   {#if fieldset}
-    <fieldset 
+    <fieldset
       class="nhsuk-fieldset{fieldset.classes ? ` ${fieldset.classes}` : ''}"
       aria-describedby={ariaDescribedBy}
       role="group"
@@ -246,14 +246,14 @@
       {/if}
 
       <!-- Date Input Container -->
-      <div 
+      <div
         class="nhsuk-date-input{classes ? ` ${classes}` : ''}"
         {id}
         {...attributes}
       >
         {#each dateInputItems as item}
           <div class="nhsuk-date-input__item">
-            <label 
+            <label
               class="nhsuk-label nhsuk-date-input__label"
               for={getItemId(item)}
             >
@@ -278,7 +278,7 @@
     </fieldset>
   {:else}
     <!-- Without Fieldset -->
-    
+
     <!-- Hint -->
     {#if hint}
       <div class="nhsuk-hint{hint.classes ? ` ${hint.classes}` : ''}" id={hintId} {...(hint.attributes || {})}>
@@ -303,7 +303,7 @@
     {/if}
 
     <!-- Date Input Container -->
-    <div 
+    <div
       class="nhsuk-date-input{classes ? ` ${classes}` : ''}"
       {id}
       aria-describedby={ariaDescribedBy}
@@ -311,7 +311,7 @@
     >
       {#each dateInputItems as item}
         <div class="nhsuk-date-input__item">
-          <label 
+          <label
             class="nhsuk-label nhsuk-date-input__label"
             for={getItemId(item)}
           >

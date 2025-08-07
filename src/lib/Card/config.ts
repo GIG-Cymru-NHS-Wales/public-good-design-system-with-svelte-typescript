@@ -2,7 +2,7 @@ export const cardConfig = {
   name: 'Card',
   variants: [
     'basic',
-    'clickable', 
+    'clickable',
     'primary',
     'secondary',
     'feature',

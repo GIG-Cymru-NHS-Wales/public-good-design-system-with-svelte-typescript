@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { TaskListProps, TaskItem } from './types';
   import { classNames, defaultConfig } from './config';
-  
+
   // Import Tag component (assuming it exists in the same project)
   // If not available, we'll render a simple span instead
   let Tag: any = null;
@@ -11,7 +11,7 @@
   } catch {
     // Tag component not available, will use fallback
   }
-  
+
   let {
     items = [],
     idPrefix = defaultConfig.idPrefix,
@@ -19,11 +19,11 @@
     attributes = {},
     ...rest
   }: TaskListProps = $props();
-  
+
   // Generate unique IDs for hints and statuses
   const getHintId = (index: number) => `${idPrefix}-${index}-hint`;
   const getStatusId = (index: number) => `${idPrefix}-${index}-status`;
-  
+
   // Build aria-describedby attribute
   const getAriaDescribedBy = (item: TaskItem, index: number) => {
     const parts = [];
@@ -35,7 +35,7 @@
   };
 </script>
 
-<ul 
+<ul
   class="{classNames.root} {classes}"
   {...attributes}
   {...rest}
@@ -44,7 +44,7 @@
     <li class="{classNames.item} {item.href ? classNames.itemWithLink : ''} {item.classes || ''}">
       <div class={classNames.nameAndHint}>
         {#if item.href}
-          <a 
+          <a
             class="{classNames.link} {item.title.classes || ''}"
             href={item.href}
             aria-describedby={getAriaDescribedBy(item, index + 1)}
@@ -64,7 +64,7 @@
             {/if}
           </div>
         {/if}
-        
+
         {#if item.hint}
           <div id={getHintId(index + 1)} class={classNames.hint}>
             {#if item.hint.html}
@@ -75,14 +75,14 @@
           </div>
         {/if}
       </div>
-      
-      <div 
+
+      <div
         class="{classNames.status} {item.status.classes || ''}"
         id={getStatusId(index + 1)}
       >
         {#if item.status.tag}
           {#if Tag}
-            <Tag 
+            <Tag
               text={item.status.tag.text}
               classes={item.status.tag.classes}
               attributes={item.status.tag.attributes}

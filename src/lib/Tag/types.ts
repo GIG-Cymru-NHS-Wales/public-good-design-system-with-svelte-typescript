@@ -1,7 +1,7 @@
 /**
  * Tag component color variants
  */
-export type TagColor = 
+export type TagColor =
   | 'default'
   | 'white'
   | 'grey'

@@ -16,10 +16,10 @@
   // Handle navigation with preloading
   function handleNavigate(event: CustomEvent) {
     const { href } = event.detail;
-    
+
     // Prevent default if using custom navigation
     event.preventDefault();
-    
+
     // Use SvelteKit's goto with preloading
     goto(href, {
       preloadData: 'hover'
@@ -27,7 +27,7 @@
   }
 </script>
 
-<ContentsList 
+<ContentsList
   items={contentsItems}
   ariaLabel="Guide sections"
   attributes={{

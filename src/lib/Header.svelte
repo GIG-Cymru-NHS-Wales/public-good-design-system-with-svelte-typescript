@@ -26,8 +26,8 @@
   const searchVisuallyHiddenLabel = search.visuallyHiddenLabel || 'Search the NHS website';
 
   // Determine if logo and service name should be combined
-  const combineLogoAndServiceNameLinks = 
-    (service.href && !logo.href) || 
+  const combineLogoAndServiceNameLinks =
+    (service.href && !logo.href) ||
     (service.href && service.href === logo.href);
 
   const logoHref = combineLogoAndServiceNameLinks ? service.href : logo.href;
@@ -46,9 +46,9 @@
   }
 </script>
 
-<header 
+<header
   bind:this={headerElement}
-  class="nhsuk-header{organisation ? ' nhsuk-header--organisation' : ''}{classes ? ` ${classes}` : ''}" 
+  class="nhsuk-header{organisation ? ' nhsuk-header--organisation' : ''}{classes ? ` ${classes}` : ''}"
   role="banner"
   {...parseAttributes(attributes)}
 >
@@ -103,7 +103,7 @@
           <span class="nhsuk-header__service-name">{service.text}</span>
         {/if}
       {/if}
-      
+
       {#if service.text && !combineLogoAndServiceNameLinks}
         {#if service.href}
           <a class="nhsuk-header__service-name" href={service.href}>{service.text}</a>
@@ -117,12 +117,12 @@
       <search class="nhsuk-header__search">
         <form class="nhsuk-header__search-form" id="search" action={searchAction} method="get">
           <label class="nhsuk-u-visually-hidden" for="search-field">{searchVisuallyHiddenLabel}</label>
-          <input 
-            class="nhsuk-header__search-input nhsuk-input" 
-            id="search-field" 
-            name={searchName} 
-            type="search" 
-            placeholder={searchPlaceholder} 
+          <input
+            class="nhsuk-header__search-input nhsuk-input"
+            id="search-field"
+            name={searchName}
+            type="search"
+            placeholder={searchPlaceholder}
             autocomplete="off"
           >
           <button class="nhsuk-header__search-submit" type="submit">
@@ -136,8 +136,8 @@
     {/if}
 
     {#if account?.items?.length}
-      <nav 
-        class="nhsuk-header__account{account.classes ? ` ${account.classes}` : ''}" 
+      <nav
+        class="nhsuk-header__account{account.classes ? ` ${account.classes}` : ''}"
         aria-label={account.ariaLabel || 'Account'}
         {...parseAttributes(account.attributes || {})}
       >
@@ -188,20 +188,20 @@
   </div>
 
   {#if navigation?.items?.length}
-    <nav 
-      class="nhsuk-header__navigation{navigation.classes ? ` ${navigation.classes}` : ''}" 
+    <nav
+      class="nhsuk-header__navigation{navigation.classes ? ` ${navigation.classes}` : ''}"
       aria-label={navigation.ariaLabel || 'Menu'}
       {...parseAttributes(navigation.attributes || {})}
     >
       <div class="nhsuk-header__navigation-container nhsuk-width-container{containerClasses ? ` ${containerClasses}` : ''}">
         <ul class="nhsuk-header__navigation-list">
           {#each navigation.items as item}
-            <li 
+            <li
               class="nhsuk-header__navigation-item{item.active || item.current ? ' nhsuk-header__navigation-item--current' : ''}{item.classes ? ` ${item.classes}` : ''}"
               {...parseAttributes(item.attributes || {})}
             >
-              <a 
-                class="nhsuk-header__navigation-link" 
+              <a
+                class="nhsuk-header__navigation-link"
                 href={item.href}
                 aria-current={item.current ? 'page' : (item.active ? 'true' : undefined)}
               >

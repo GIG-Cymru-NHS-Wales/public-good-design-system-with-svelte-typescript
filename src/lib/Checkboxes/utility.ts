@@ -114,7 +114,7 @@ export function announceCheckboxChange(
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'nhsuk-u-visually-hidden';
   announcement.textContent = message;
-  
+
   document.body.appendChild(announcement);
   setTimeout(() => {
     document.body.removeChild(announcement);
@@ -133,7 +133,7 @@ export function createCheckboxGroup(
   } = {}
 ) {
   const name = options.name || title.toLowerCase().replace(/\s+/g, '-');
-  
+
   return {
     name,
     items,

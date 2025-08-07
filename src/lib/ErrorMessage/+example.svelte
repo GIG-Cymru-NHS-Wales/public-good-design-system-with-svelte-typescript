@@ -4,7 +4,7 @@
 
 <div class="example-container">
   <h1>Error Message Component Examples</h1>
-  
+
   <section>
     <h2>Default Error Message</h2>
     <div class="form-group">
@@ -18,7 +18,7 @@
     <h2>With HTML Content</h2>
     <div class="form-group">
       <label for="email-html">Email address</label>
-      <ErrorMessage 
+      <ErrorMessage
         html="Enter an email address in the correct format, like <strong>name@example.com</strong>"
       />
       <input type="email" id="email-html" class="form-input error" />
@@ -29,7 +29,7 @@
     <h2>With Custom ID</h2>
     <div class="form-group">
       <label for="password-custom">Password</label>
-      <ErrorMessage 
+      <ErrorMessage
         text="Password must be at least 8 characters long"
         id="password-error-message"
       />
@@ -41,7 +41,7 @@
     <h2>With Custom Visually Hidden Text</h2>
     <div class="form-group">
       <label for="dob-custom">Date of birth</label>
-      <ErrorMessage 
+      <ErrorMessage
         text="Date of birth must be in the past"
         visuallyHiddenText="Validation error"
       />
@@ -53,7 +53,7 @@
     <h2>Without Visually Hidden Text</h2>
     <div class="form-group">
       <label for="phone-no-hidden">Phone number</label>
-      <ErrorMessage 
+      <ErrorMessage
         text="Enter a valid UK phone number"
         visuallyHiddenText=""
       />
@@ -65,7 +65,7 @@
     <h2>With Custom Classes</h2>
     <div class="form-group">
       <label for="postcode-classes">Postcode</label>
-      <ErrorMessage 
+      <ErrorMessage
         text="Enter a valid UK postcode"
         class="custom-error-class"
       />
@@ -77,7 +77,7 @@
     <h2>With Custom Attributes</h2>
     <div class="form-group">
       <label for="nhs-number">NHS Number</label>
-      <ErrorMessage 
+      <ErrorMessage
         text="NHS number must be 10 digits"
         data-testid="nhs-number-error"
         data-field="nhs-number"
@@ -91,15 +91,15 @@
     <div class="form-group">
       <fieldset>
         <legend>What is your address?</legend>
-        
+
         <label for="address-line-1">Address line 1</label>
         <ErrorMessage text="Enter the first line of your address" />
         <input type="text" id="address-line-1" class="form-input error" />
-        
+
         <label for="address-town">Town or city</label>
         <ErrorMessage text="Enter your town or city" />
         <input type="text" id="address-town" class="form-input error" />
-        
+
         <label for="address-postcode">Postcode</label>
         <ErrorMessage text="Enter a valid postcode" />
         <input type="text" id="address-postcode" class="form-input error" />
@@ -111,7 +111,7 @@
     <h2>Complex HTML Error Message</h2>
     <div class="form-group">
       <label for="file-upload">Upload your document</label>
-      <ErrorMessage 
+      <ErrorMessage
         html="<span>The file must be:</span><ul><li>Less than 5MB</li><li>In PDF, DOC, or DOCX format</li><li>Not password protected</li></ul>"
       />
       <input type="file" id="file-upload" class="form-input error" />

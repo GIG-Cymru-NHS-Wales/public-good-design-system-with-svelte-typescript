@@ -47,7 +47,7 @@
     {/if}
 {/if}
 
-<table 
+<table
   class="nhsuk-table{responsive ? '-responsive' : ''}{tableClasses ? ` ${tableClasses}` : ''}"
   {responsive ? 'role="table"' : ''}
   {...attributes}
@@ -61,8 +61,8 @@
     <thead class="nhsuk-table__head" {responsive ? 'role="rowgroup"' : ''}>
       <tr {responsive ? 'role="row"' : ''}>
         {#each head as item}
-          <th 
-            scope="col" 
+          <th
+            scope="col"
             class="nhsuk-table__header{item.format ? ` nhsuk-table__header--${item.format}` : ''}{item.classes ? ` ${item.classes}` : ''}"
             {item.colspan ? `colspan="${item.colspan}"` : ''}
             {item.rowspan ? `rowspan="${item.rowspan}"` : ''}
@@ -81,8 +81,8 @@
       <tr class="nhsuk-table__row" {responsive ? 'role="row"' : ''}>
         {#each row as cell, cellIndex}
           {#if cellIndex === 0 && firstCellIsHeader}
-            <th 
-              scope="row" 
+            <th
+              scope="row"
               class="nhsuk-table__header{cell.classes ? ` ${cell.classes}` : ''}"
               {responsive ? 'role="rowheader"' : ''}
               {cell.colspan ? `colspan="${cell.colspan}"` : ''}
@@ -95,7 +95,7 @@
               {@html cell.html || cell.text || ''}
             </th>
           {:else}
-            <td 
+            <td
               class="nhsuk-table__cell{cell.format ? ` nhsuk-table__cell--${cell.format}` : ''}{cell.classes ? ` ${cell.classes}` : ''}"
               {responsive ? 'role="cell"' : ''}
               {cell.colspan ? `colspan="${cell.colspan}"` : ''}
@@ -120,7 +120,7 @@
 
 <style>
   /* Table component styles compiled from SCSS */
-  
+
   /* Table container */
   .nhsuk-table-container {
     display: block;

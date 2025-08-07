@@ -142,15 +142,15 @@
   function handleChange(event: Event, item: CheckboxItem, itemId: string) {
     const target = event.target as HTMLInputElement;
     const isChecked = target.checked;
-    
+
     let newValues = [...values];
-    
+
     if (isChecked) {
       // Add value if not already present
       if (!newValues.includes(item.value)) {
         newValues.push(item.value);
       }
-      
+
       // Handle exclusive behavior
       if (item.exclusive && item.exclusiveGroup) {
         // Uncheck all other items in the same exclusive group
@@ -158,7 +158,7 @@
           const otherItem = items.find(i => i.value === value && i.exclusiveGroup === item.exclusiveGroup);
           return !otherItem || otherItem.value === item.value;
         });
-        
+
         // Update conditional states for unchecked items
         items.forEach((otherItem, index) => {
           if (otherItem.exclusiveGroup === item.exclusiveGroup && otherItem.value !== item.value) {
@@ -170,11 +170,11 @@
         });
       } else if (item.exclusiveGroup) {
         // Uncheck exclusive items in the same group
-        const exclusiveItems = items.filter(i => 
-          i.exclusive && 
+        const exclusiveItems = items.filter(i =>
+          i.exclusive &&
           i.exclusiveGroup === item.exclusiveGroup
         );
-        
+
         exclusiveItems.forEach(exclusiveItem => {
           newValues = newValues.filter(v => v !== exclusiveItem.value);
           const exclusiveIndex = items.indexOf(exclusiveItem);
@@ -195,7 +195,7 @@
     }
 
     values = newValues;
-    
+
     dispatch('change', {
       value: item.value,
       checked: isChecked,
@@ -222,7 +222,7 @@
 
 <div class="nhsuk-form-group{errorMessage ? ' nhsuk-form-group--error' : ''}{formGroup?.classes ? ` ${formGroup.classes}` : ''}">
   {#if fieldset}
-    <fieldset 
+    <fieldset
       class="nhsuk-fieldset{fieldset.classes ? ` ${fieldset.classes}` : ''}"
       aria-describedby={ariaDescribedBy}
       {...(fieldset.attributes || {})}
@@ -271,7 +271,7 @@
       {/if}
 
       <!-- Checkboxes Container -->
-      <div 
+      <div
         class="nhsuk-checkboxes{hasConditional ? ' nhsuk-checkboxes--conditional' : ''}{classes ? ` ${classes}` : ''}"
         data-module="nhsuk-checkboxes"
         {...attributes}
@@ -304,8 +304,8 @@
                 on:change={(e) => handleChange(e, item, itemId)}
                 {...(item.attributes || {})}
               />
-              
-              <label 
+
+              <label
                 class="nhsuk-checkboxes__label{item.label?.classes ? ` ${item.label.classes}` : ''}"
                 for={itemId}
                 {...(item.label?.attributes || {})}
@@ -318,7 +318,7 @@
               </label>
 
               {#if hasHint}
-                <div 
+                <div
                   class="nhsuk-hint nhsuk-checkboxes__hint{item.hint?.classes ? ` ${item.hint.classes}` : ''}"
                   id={itemHintId}
                   {...(item.hint?.attributes || {})}
@@ -333,7 +333,7 @@
             </div>
 
             {#if item.conditional}
-              <div 
+              <div
                 class="nhsuk-checkboxes__conditional{!conditionalStates[itemId] ? ' nhsuk-checkboxes__conditional--hidden' : ''}"
                 id={conditionalId}
               >
@@ -346,7 +346,7 @@
     </fieldset>
   {:else}
     <!-- Without Fieldset -->
-    
+
     <!-- Hint -->
     {#if hint}
       <div class="nhsuk-hint{hint.classes ? ` ${hint.classes}` : ''}" id={hintId} {...(hint.attributes || {})}>
@@ -371,7 +371,7 @@
     {/if}
 
     <!-- Checkboxes Container -->
-    <div 
+    <div
       class="nhsuk-checkboxes{hasConditional ? ' nhsuk-checkboxes--conditional' : ''}{classes ? ` ${classes}` : ''}"
       data-module="nhsuk-checkboxes"
       aria-describedby={ariaDescribedBy}
@@ -405,8 +405,8 @@
               on:change={(e) => handleChange(e, item, itemId)}
               {...(item.attributes || {})}
             />
-            
-            <label 
+
+            <label
               class="nhsuk-checkboxes__label{item.label?.classes ? ` ${item.label.classes}` : ''}"
               for={itemId}
               {...(item.label?.attributes || {})}
@@ -419,7 +419,7 @@
             </label>
 
             {#if hasHint}
-              <div 
+              <div
                 class="nhsuk-hint nhsuk-checkboxes__hint{item.hint?.classes ? ` ${item.hint.classes}` : ''}"
                 id={itemHintId}
                 {...(item.hint?.attributes || {})}
@@ -434,7 +434,7 @@
           </div>
 
           {#if item.conditional}
-            <div 
+            <div
               class="nhsuk-checkboxes__conditional{!conditionalStates[itemId] ? ' nhsuk-checkboxes__conditional--hidden' : ''}"
               id={conditionalId}
             >

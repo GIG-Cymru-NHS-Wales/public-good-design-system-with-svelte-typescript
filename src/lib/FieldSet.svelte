@@ -11,7 +11,7 @@
   }: FieldsetProps = $props();
 </script>
 
-<fieldset 
+<fieldset
   class="nhsuk-fieldset{classes ? ` ${classes}` : ''}"
   aria-describedby={describedBy}
   {...parseAttributes(attributes)}
@@ -35,7 +35,7 @@
       {/if}
     </legend>
   {/if}
-  
+
   {#if children}
     {@render children()}
   {/if}
@@ -63,7 +63,7 @@
     max-width: 100%;
     padding: 0;
     white-space: normal;
-    
+
     font-family: Frutiger W01, Arial, Sans-serif;
     font-size: 19px;
     font-size: 1.1875rem;

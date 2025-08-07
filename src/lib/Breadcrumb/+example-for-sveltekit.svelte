@@ -33,7 +33,7 @@
   });
 </script>
 
-<Breadcrumb 
+<Breadcrumb
   items={breadcrumbItems}
   text={currentPageText}
   href={$page.url.pathname}

@@ -2,7 +2,7 @@
   import { onMount, onDestroy } from 'svelte';
   import type { TabsProps, TabItem } from './types';
   import { defaultConfig, classNames, ariaConfig, breakpoints } from './config';
-  
+
   let {
     id = $bindable(),
     idPrefix = defaultConfig.idPrefix,
@@ -12,27 +12,27 @@
     attributes = {},
     ...rest
   }: TabsProps = $props();
-  
+
   let activeIndex = $state(0);
   let isMobile = $state(true);
   let isSupported = $state(false);
   let tabsElement: HTMLDivElement;
   let tabRefs: HTMLAnchorElement[] = [];
   let mediaQuery: MediaQueryList;
-  
+
   // Generate IDs for tabs and panels
   const getTabId = (item: TabItem, index: number) => {
     return item.id || `${idPrefix}-${index + 1}`;
   };
-  
+
   const getPanelId = (item: TabItem, index: number) => {
     return getTabId(item, index);
   };
-  
+
   const getTabElementId = (item: TabItem, index: number) => {
     return `tab_${getTabId(item, index)}`;
   };
-  
+
   // Handle tab click
   const handleTabClick = (event: MouseEvent, index: number) => {
     if (!isMobile && isSupported) {
@@ -41,7 +41,7 @@
       updateHash(items[index], index);
     }
   };
-  
+
   // Handle keyboard navigation
   const handleKeyDown = (event: KeyboardEvent, index: number) => {
     if (!isMobile && isSupported) {
@@ -63,7 +63,7 @@
       }
     }
   };
-  
+
   const activateNextTab = (currentIndex: number) => {
     const nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : currentIndex;
     if (nextIndex !== currentIndex) {
@@ -72,7 +72,7 @@
       updateHash(items[nextIndex], nextIndex);
     }
   };
-  
+
   const activatePreviousTab = (currentIndex: number) => {
     const prevIndex = currentIndex > 0 ? currentIndex - 1 : currentIndex;
     if (prevIndex !== currentIndex) {
@@ -81,7 +81,7 @@
       updateHash(items[prevIndex], prevIndex);
     }
   };
-  
+
   const updateHash = (item: TabItem, index: number) => {
     const panelId = getPanelId(item, index);
     const panel = document.getElementById(panelId);
@@ -93,7 +93,7 @@
       panel.id = originalId;
     }
   };
-  
+
   const handleHashChange = () => {
     const hash = window.location.hash.slice(1);
     if (hash) {
@@ -103,11 +103,11 @@
       }
     }
   };
-  
+
   const checkMode = () => {
     isMobile = !mediaQuery.matches;
   };
-  
+
   // Initialize from URL hash
   const initFromHash = () => {
     const hash = window.location.hash.slice(1);
@@ -118,17 +118,17 @@
       }
     }
   };
-  
+
   onMount(() => {
     // Check if JavaScript is supported
     isSupported = document.body.classList.contains(classNames.frontendSupported);
-    
+
     if (typeof window.matchMedia === 'function') {
       mediaQuery = window.matchMedia(`(min-width: ${breakpoints.tablet}px)`);
-      
+
       // Check initial state
       checkMode();
-      
+
       // Add listener for responsive changes
       if ('addEventListener' in mediaQuery) {
         mediaQuery.addEventListener('change', checkMode);
@@ -137,13 +137,13 @@
         (mediaQuery as any).addListener(checkMode);
       }
     }
-    
+
     // Initialize from hash
     initFromHash();
-    
+
     // Add hash change listener
     window.addEventListener('hashchange', handleHashChange);
-    
+
     return () => {
       if (mediaQuery) {
         if ('removeEventListener' in mediaQuery) {
@@ -168,9 +168,9 @@
   <h2 class={classNames.title}>
     {title}
   </h2>
-  
+
   {#if items.length > 0}
-    <ul 
+    <ul
       class={classNames.list}
       role={!isMobile && isSupported ? ariaConfig.roles.tablist : undefined}
     >
@@ -179,8 +179,8 @@
           {@const tabId = getTabElementId(item, index)}
           {@const panelId = getPanelId(item, index)}
           {@const isActive = activeIndex === index}
-          
-          <li 
+
+          <li
             class="{classNames.listItem} {isActive && !isMobile && isSupported ? classNames.listItemSelected : ''}"
             role={!isMobile && isSupported ? ariaConfig.roles.presentation : undefined}
           >
@@ -204,13 +204,13 @@
       {/each}
     </ul>
   {/if}
-  
+
   {#each items as item, index}
     {#if item}
       {@const panelId = getPanelId(item, index)}
       {@const tabId = getTabElementId(item, index)}
       {@const isHidden = !isMobile && isSupported && activeIndex !== index}
-      
+
       <div
         id={panelId}
         class="{classNames.panel} {isHidden ? classNames.panelHidden : ''}"

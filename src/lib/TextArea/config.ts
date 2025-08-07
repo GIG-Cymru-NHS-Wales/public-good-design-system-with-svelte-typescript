@@ -76,7 +76,7 @@ export const commonConfigs = {
     autocomplete: 'street-address' as AutocompleteValue,
     rows: 5
   },
-  
+
   /** Comments textarea configuration */
   comments: {
     name: 'comments',
@@ -84,7 +84,7 @@ export const commonConfigs = {
     hint: { text: 'Please provide any additional information' },
     rows: 4
   },
-  
+
   /** Feedback textarea configuration */
   feedback: {
     name: 'feedback',
@@ -92,7 +92,7 @@ export const commonConfigs = {
     hint: { text: 'Tell us what you think about our service' },
     rows: 6
   },
-  
+
   /** Medical history textarea configuration */
   medicalHistory: {
     name: 'medical-history',
@@ -100,7 +100,7 @@ export const commonConfigs = {
     hint: { text: 'Include any relevant medical conditions, medications, or allergies' },
     rows: 8
   },
-  
+
   /** Reason/explanation textarea configuration */
   reason: {
     name: 'reason',
@@ -132,16 +132,16 @@ export function createTextareaConfig(
 export const validationPatterns = {
   /** No special characters */
   alphanumericOnly: /^[a-zA-Z0-9\s.,!?-]*$/,
-  
+
   /** No HTML tags */
   noHtml: /^[^<>]*$/,
-  
+
   /** UK postcode format */
   ukPostcode: /^[A-Z]{1,2}[0-9]{1,2}[A-Z]?\s?[0-9][A-Z]{2}$/i,
-  
+
   /** Email format */
   email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-  
+
   /** URL format */
   url: /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
 };
@@ -162,8 +162,8 @@ export interface CharacterCountConfig {
  * Default character count messages
  */
 export const defaultCharacterCountMessages = {
-  under: (remaining: number) => 
+  under: (remaining: number) =>
     `You have ${remaining} character${remaining !== 1 ? 's' : ''} remaining`,
-  over: (over: number) => 
+  over: (over: number) =>
     `You have ${over} character${over !== 1 ? 's' : ''} too many`
 };

@@ -88,28 +88,28 @@
   // Determine content classes
   const contentClasses = $derived(() => {
     if (type) return 'nhsuk-card--care__heading-container';
-    
+
     const classList = ['nhsuk-card__content'];
     if (feature) classList.push('nhsuk-card__content--feature');
     if (primary) classList.push('nhsuk-card__content--primary');
     if (secondary) classList.push('nhsuk-card__content--secondary');
-    
+
     return classList.join(' ');
   });
 
   // Determine heading classes
   const headingCssClasses = $derived(() => {
     const classList = [];
-    
+
     if (type) {
       classList.push('nhsuk-card--care__heading');
     } else {
       classList.push('nhsuk-card__heading');
     }
-    
+
     if (feature) classList.push('nhsuk-card__heading--feature');
     if (headingClasses) classList.push(headingClasses);
-    
+
     return classList.join(' ');
   });
 
@@ -141,7 +141,7 @@
   }
 </script>
 
-<div 
+<div
   class={cardClasses}
   on:click={handleClick}
   {...attributes}
@@ -188,12 +188,12 @@
     {/if}
 
     {#if primary}
-      <svg 
-        class="nhsuk-icon" 
-        xmlns="http://www.w3.org/2000/svg" 
-        width="27" 
-        height="27" 
-        aria-hidden="true" 
+      <svg
+        class="nhsuk-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="27"
+        height="27"
+        aria-hidden="true"
         focusable="false"
       >
         <circle cx="13.333" cy="13.333" r="13.333" fill="" />

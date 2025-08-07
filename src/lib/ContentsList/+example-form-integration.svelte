@@ -43,7 +43,7 @@
   <h2 class="nhsuk-u-visually-hidden">Contents</h2>
   <ol class="nhsuk-contents-list__list">
     {#each enhancedItems as item}
-      <li 
+      <li
         class="nhsuk-contents-list__item course-item"
         class:completed={item.completed}
         class:bookmarked={item.bookmarked}
@@ -64,9 +64,9 @@
             {/if}
           </a>
         {/if}
-        
+
         <div class="item-actions">
-          <button 
+          <button
             type="button"
             class="bookmark-btn"
             class:active={item.bookmarked}
@@ -75,9 +75,9 @@
           >
             {item.bookmarked ? '★' : '☆'}
           </button>
-          
+
           {#if !item.completed && item.current}
-            <button 
+            <button
               type="button"
               class="complete-btn"
               on:click={() => markAsCompleted(item.href)}

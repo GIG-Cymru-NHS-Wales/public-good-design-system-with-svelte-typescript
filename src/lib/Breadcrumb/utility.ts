@@ -11,7 +11,7 @@ export function createBreadcrumbFromRoute(
   segments.forEach((segment, index) => {
     currentPath += `/${segment}`;
     const label = routeLabels[segment] || segment.charAt(0).toUpperCase() + segment.slice(1);
-    
+
     items.push({
       href: currentPath,
       text: label,
@@ -29,7 +29,7 @@ export function createBreadcrumbFromData(
   currentPath: string
 ): BreadcrumbItem[] {
   const items: BreadcrumbItem[] = [];
-  
+
   // Find the current page and build breadcrumb trail
   const findPath = (path: string): BreadcrumbItem[] => {
     const segments = path.split('/').filter(Boolean);
@@ -40,7 +40,7 @@ export function createBreadcrumbFromData(
     segments.forEach((segment, index) => {
       const itemPath = '/' + segments.slice(0, index + 1).join('/');
       const item = navigationData.find(nav => nav.path === itemPath);
-      
+
       if (item) {
         breadcrumbs.push({
           href: item.path,

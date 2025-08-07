@@ -22,10 +22,10 @@
 
 <form method="POST" use:enhance={submitForm}>
   <input type="hidden" name="selectedService" bind:value={selectedService} />
-  
+
   <!-- Service selection cards -->
   <div class="service-selection">
-    <Card 
+    <Card
       heading="Book GP appointment"
       clickable={true}
       classes={selectedService === 'gp' ? 'selected' : ''}
@@ -37,7 +37,7 @@
       {/snippet}
     </Card>
 
-    <Card 
+    <Card
       heading="Emergency consultation"
       type="urgent"
       clickable={true}

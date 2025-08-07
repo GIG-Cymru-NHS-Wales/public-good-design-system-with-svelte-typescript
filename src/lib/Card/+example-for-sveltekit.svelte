@@ -15,7 +15,7 @@
 
 <!-- Dynamic service cards -->
 {#each services as service}
-  <Card 
+  <Card
     href="/services/{service.id}"
     clickable={true}
     heading={service.name}
@@ -33,7 +33,7 @@
 
 <!-- Conditional emergency card based on user data -->
 {#if data.user?.hasEmergencyContact}
-  <Card 
+  <Card
     type="emergency"
     heading="Emergency contact on file"
     headingLevel={3}

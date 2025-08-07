@@ -24,16 +24,16 @@ I'll help you convert this Nunjucks component to Svelte 5. Let me create the nec
 
 
 Fieldset.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the Nunjucks fieldset component to Svelte 5. Here's what I've created:
 
 1. Fieldset.svelte - Main Component
@@ -97,16 +97,16 @@ I'll help you convert this Nunjucks footer component to Svelte 5. Let me create 
 
 
 Footer.svelte - Main Component
-Code 
+Code
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 I've successfully converted the Nunjucks footer component to Svelte 5. Here's what I've created:
 
 1. Footer.svelte - Main Component
@@ -141,7 +141,7 @@ CSS: Converted SCSS to vanilla CSS with:
 Calculated rem values (base 16px)
 Expanded media queries (desktop: 61.875em, tablet: 40.0625em)
 NHS UK color values (
-#f0f4f5 for grey-4, 
+#f0f4f5 for grey-4,
 #005eb8 for blue, etc.)
 Clearfix implementation
 Print media query for hiding footer
@@ -177,7 +177,7 @@ I'll help you convert this NHS UK header component from Nunjucks to Svelte 5. Th
 
 
 Header.svelte - Main Component
-Code 
+Code
 
 
 
@@ -185,16 +185,16 @@ Continue
 
 
 Header.svelte - Main Component
-Code ∙ Version 2 
+Code ∙ Version 2
 
 types.ts - TypeScript Types
-Code 
+Code
 
 config.ts - Component Configuration
-Code 
+Code
 
 +example.svelte - Examples
-Code 
+Code
 
 
 
@@ -202,10 +202,10 @@ Continue
 
 
 +example.svelte - Examples
-Code 
+Code
 
 Making edits...
-Code 
+Code
 
 Continue
 

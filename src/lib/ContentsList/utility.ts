@@ -69,7 +69,7 @@ export function getNavigationData(
   currentPath: string
 ) {
   const currentIndex = items.findIndex(item => item.href === currentPath);
-  
+
   return {
     current: currentIndex >= 0 ? items[currentIndex] : null,
     previous: currentIndex > 0 ? items[currentIndex - 1] : null,

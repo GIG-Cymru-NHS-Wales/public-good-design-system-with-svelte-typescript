@@ -21,7 +21,7 @@
   <div class="nhsuk-footer-container">
     <div class="nhsuk-width-container{containerClasses ? ` ${containerClasses}` : ''}">
       <h2 class="nhsuk-u-visually-hidden">Support links</h2>
-      <div 
+      <div
         class="nhsuk-footer{classes ? ` ${classes}` : ''}"
         {...parseAttributes(attributes)}
       >
